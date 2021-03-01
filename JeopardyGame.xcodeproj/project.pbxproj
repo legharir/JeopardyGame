@@ -7,28 +7,254 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8464C4F425E9E7A900596BE0 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8464C4F325E9E7A900596BE0 /* ResourcePath.mm */; };
-		8464C4F725E9E7A900596BE0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8464C4F625E9E7A900596BE0 /* main.cpp */; };
-		8464C4FA25E9E7A900596BE0 /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8464C4F925E9E7A900596BE0 /* cute_image.jpg */; };
-		8464C4FC25E9E7A900596BE0 /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 8464C4FB25E9E7A900596BE0 /* nice_music.ogg */; };
-		8464C4FE25E9E7A900596BE0 /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8464C4FD25E9E7A900596BE0 /* sansation.ttf */; };
-		8464C50025E9E7A900596BE0 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8464C4FF25E9E7A900596BE0 /* icon.png */; };
+		8411C82E25EAFAF5007D621B /* PlayerInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8411C80225EAFAF4007D621B /* PlayerInfo.cpp */; };
+		8411C82F25EAFAF5007D621B /* ClueState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8411C80325EAFAF4007D621B /* ClueState.cpp */; };
+		8411C83025EAFAF5007D621B /* LobbyState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8411C80525EAFAF4007D621B /* LobbyState.cpp */; };
+		8411C83125EAFAF5007D621B /* Engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8411C80A25EAFAF4007D621B /* Engine.cpp */; };
+		8411C83225EAFAF5007D621B /* WagerState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8411C80C25EAFAF4007D621B /* WagerState.cpp */; };
+		8411C83325EAFAF5007D621B /* Clue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8411C80D25EAFAF4007D621B /* Clue.cpp */; };
+		8411C83425EAFAF5007D621B /* PickState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8411C81025EAFAF4007D621B /* PickState.cpp */; };
+		8411C83525EAFAF5007D621B /* DrawablePlayerBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8411C81125EAFAF4007D621B /* DrawablePlayerBoard.cpp */; };
+		8411C83625EAFAF5007D621B /* JeopardyGameClient-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8411C81225EAFAF4007D621B /* JeopardyGameClient-Info.plist */; };
+		8411C83725EAFAF5007D621B /* IntroState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8411C81325EAFAF4007D621B /* IntroState.cpp */; };
+		8411C83925EAFAF5007D621B /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8411C81525EAFAF4007D621B /* Button.cpp */; };
+		8411C83B25EAFAF5007D621B /* Podiums.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8411C81925EAFAF4007D621B /* Podiums.cpp */; };
+		8411C83C25EAFAF5007D621B /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8411C81A25EAFAF4007D621B /* Client.cpp */; };
+		8411C83D25EAFAF5007D621B /* PlayState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8411C81D25EAFAF4007D621B /* PlayState.cpp */; };
+		8411C83E25EAFAF5007D621B /* TextField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8411C81F25EAFAF4007D621B /* TextField.cpp */; };
+		8411C84025EAFAF5007D621B /* Buzzer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8411C82525EAFAF5007D621B /* Buzzer.cpp */; };
+		8411C84125EAFAF5007D621B /* Question.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8411C82625EAFAF5007D621B /* Question.cpp */; };
+		8411C84225EAFAF5007D621B /* Podium.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8411C82825EAFAF5007D621B /* Podium.cpp */; };
+		8411C84325EAFAF5007D621B /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8411C82A25EAFAF5007D621B /* Player.cpp */; };
+		8411C84525EAFAF5007D621B /* BuzzInState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8411C82D25EAFAF5007D621B /* BuzzInState.cpp */; };
+		8464C51425E9E98500596BE0 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8464C51325E9E98500596BE0 /* ResourcePath.mm */; };
+		8464C51725E9E98500596BE0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8464C51625E9E98500596BE0 /* main.cpp */; };
+		8464C53025E9E9AE00596BE0 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8464C52F25E9E9AE00596BE0 /* ResourcePath.mm */; };
+		8464C53325E9E9AE00596BE0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8464C53225E9E9AE00596BE0 /* main.cpp */; };
+		84BF7B8E25EC71940028B0DF /* season15.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B6A25EC71910028B0DF /* season15.tsv */; };
+		84BF7B8F25EC71940028B0DF /* season36.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B6B25EC71920028B0DF /* season36.tsv */; };
+		84BF7B9025EC71940028B0DF /* season19.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B6C25EC71920028B0DF /* season19.tsv */; };
+		84BF7B9125EC71940028B0DF /* season12.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B6D25EC71920028B0DF /* season12.tsv */; };
+		84BF7B9225EC71940028B0DF /* season25.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B6E25EC71920028B0DF /* season25.tsv */; };
+		84BF7B9325EC71940028B0DF /* season30.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B6F25EC71920028B0DF /* season30.tsv */; };
+		84BF7B9425EC71940028B0DF /* season33.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B7025EC71920028B0DF /* season33.tsv */; };
+		84BF7B9525EC71940028B0DF /* season7.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B7125EC71920028B0DF /* season7.tsv */; };
+		84BF7B9625EC71940028B0DF /* season10.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B7225EC71920028B0DF /* season10.tsv */; };
+		84BF7B9725EC71940028B0DF /* season22.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B7325EC71920028B0DF /* season22.tsv */; };
+		84BF7B9825EC71940028B0DF /* season21.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B7425EC71920028B0DF /* season21.tsv */; };
+		84BF7B9925EC71940028B0DF /* season8.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B7525EC71920028B0DF /* season8.tsv */; };
+		84BF7B9A25EC71940028B0DF /* season27.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B7625EC71920028B0DF /* season27.tsv */; };
+		84BF7B9B25EC71940028B0DF /* season16.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B7725EC71920028B0DF /* season16.tsv */; };
+		84BF7B9C25EC71940028B0DF /* season28.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B7825EC71930028B0DF /* season28.tsv */; };
+		84BF7B9D25EC71940028B0DF /* season26.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B7925EC71930028B0DF /* season26.tsv */; };
+		84BF7B9E25EC71940028B0DF /* season32.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B7A25EC71930028B0DF /* season32.tsv */; };
+		84BF7B9F25EC71940028B0DF /* season34.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B7B25EC71930028B0DF /* season34.tsv */; };
+		84BF7BA025EC71940028B0DF /* season17.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B7C25EC71930028B0DF /* season17.tsv */; };
+		84BF7BA125EC71940028B0DF /* season24.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B7D25EC71930028B0DF /* season24.tsv */; };
+		84BF7BA225EC71940028B0DF /* season1.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B7E25EC71930028B0DF /* season1.tsv */; };
+		84BF7BA325EC71940028B0DF /* season18.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B7F25EC71930028B0DF /* season18.tsv */; };
+		84BF7BA425EC71940028B0DF /* season13.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B8025EC71930028B0DF /* season13.tsv */; };
+		84BF7BA525EC71940028B0DF /* season23.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B8125EC71930028B0DF /* season23.tsv */; };
+		84BF7BA625EC71940028B0DF /* season3.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B8225EC71930028B0DF /* season3.tsv */; };
+		84BF7BA725EC71940028B0DF /* season9.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B8325EC71930028B0DF /* season9.tsv */; };
+		84BF7BA825EC71940028B0DF /* season11.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B8425EC71930028B0DF /* season11.tsv */; };
+		84BF7BA925EC71940028B0DF /* season20.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B8525EC71940028B0DF /* season20.tsv */; };
+		84BF7BAA25EC71940028B0DF /* season35.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B8625EC71940028B0DF /* season35.tsv */; };
+		84BF7BAB25EC71940028B0DF /* season6.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B8725EC71940028B0DF /* season6.tsv */; };
+		84BF7BAC25EC71940028B0DF /* season2.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B8825EC71940028B0DF /* season2.tsv */; };
+		84BF7BAD25EC71940028B0DF /* season31.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B8925EC71940028B0DF /* season31.tsv */; };
+		84BF7BAE25EC71940028B0DF /* season5.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B8A25EC71940028B0DF /* season5.tsv */; };
+		84BF7BAF25EC71940028B0DF /* season29.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B8B25EC71940028B0DF /* season29.tsv */; };
+		84BF7BB025EC71940028B0DF /* season14.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B8C25EC71940028B0DF /* season14.tsv */; };
+		84BF7BB125EC71940028B0DF /* season4.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B8D25EC71940028B0DF /* season4.tsv */; };
+		84BF7BBF25EC72180028B0DF /* GameMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BF7BBB25EC72180028B0DF /* GameMessage.cpp */; };
+		84BF7BC025EC72180028B0DF /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BF7BBC25EC72180028B0DF /* Utils.cpp */; };
+		84BF7BC525EC724E0028B0DF /* GameMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BF7BBB25EC72180028B0DF /* GameMessage.cpp */; };
+		84BF7BC625EC724E0028B0DF /* GameMessage.h in Sources */ = {isa = PBXBuildFile; fileRef = 84BF7BBD25EC72180028B0DF /* GameMessage.h */; };
+		84BF7BC725EC724E0028B0DF /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BF7BBC25EC72180028B0DF /* Utils.cpp */; };
+		84BF7BC825EC724E0028B0DF /* Utils.H in Sources */ = {isa = PBXBuildFile; fileRef = 84BF7BBE25EC72180028B0DF /* Utils.H */; };
+		84BF7BCD25EC72560028B0DF /* GameMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BF7BBB25EC72180028B0DF /* GameMessage.cpp */; };
+		84BF7BCE25EC72560028B0DF /* GameMessage.h in Sources */ = {isa = PBXBuildFile; fileRef = 84BF7BBD25EC72180028B0DF /* GameMessage.h */; };
+		84BF7BCF25EC72560028B0DF /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BF7BBC25EC72180028B0DF /* Utils.cpp */; };
+		84BF7BD025EC72560028B0DF /* Utils.H in Sources */ = {isa = PBXBuildFile; fileRef = 84BF7BBE25EC72180028B0DF /* Utils.H */; };
+		84F88F4825EB0525005580D9 /* SWagerState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F88F2E25EB0524005580D9 /* SWagerState.cpp */; };
+		84F88F4925EB0525005580D9 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F88F2F25EB0524005580D9 /* Game.cpp */; };
+		84F88F4A25EB0525005580D9 /* GameBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F88F3025EB0524005580D9 /* GameBoard.cpp */; };
+		84F88F4B25EB0525005580D9 /* SBuzzInState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F88F3225EB0524005580D9 /* SBuzzInState.cpp */; };
+		84F88F4C25EB0525005580D9 /* SubRound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F88F3325EB0524005580D9 /* SubRound.cpp */; };
+		84F88F4D25EB0525005580D9 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F88F3425EB0524005580D9 /* Player.cpp */; };
+		84F88F4E25EB0525005580D9 /* SIntroState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F88F3625EB0524005580D9 /* SIntroState.cpp */; };
+		84F88F4F25EB0525005580D9 /* SPickState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F88F3725EB0524005580D9 /* SPickState.cpp */; };
+		84F88F5025EB0525005580D9 /* SPlayState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F88F3825EB0524005580D9 /* SPlayState.cpp */; };
+		84F88F5125EB0525005580D9 /* Server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F88F3925EB0524005580D9 /* Server.cpp */; };
+		84F88F5225EB0525005580D9 /* DatasetReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F88F3D25EB0525005580D9 /* DatasetReader.cpp */; };
+		84F88F5325EB0525005580D9 /* Clue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F88F4025EB0525005580D9 /* Clue.cpp */; };
+		84F88F5425EB0525005580D9 /* JeopardyGameServer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84F88F4525EB0525005580D9 /* JeopardyGameServer-Info.plist */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		84BF7B5025EC1E2B0028B0DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8464C4E525E9E7A900596BE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8464C50E25E9E98500596BE0;
+			remoteInfo = JeopardyGameClient;
+		};
+		84BF7B5225EC1E2B0028B0DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8464C4E525E9E7A900596BE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8464C52A25E9E9AE00596BE0;
+			remoteInfo = JeopardyGameServer;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		8411C80225EAFAF4007D621B /* PlayerInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerInfo.cpp; sourceTree = "<group>"; };
+		8411C80325EAFAF4007D621B /* ClueState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClueState.cpp; sourceTree = "<group>"; };
+		8411C80425EAFAF4007D621B /* BuzzInState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuzzInState.h; sourceTree = "<group>"; };
+		8411C80525EAFAF4007D621B /* LobbyState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LobbyState.cpp; sourceTree = "<group>"; };
+		8411C80625EAFAF4007D621B /* PickState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickState.h; sourceTree = "<group>"; };
+		8411C80725EAFAF4007D621B /* PlayState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayState.h; sourceTree = "<group>"; };
+		8411C80825EAFAF4007D621B /* Clue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Clue.h; sourceTree = "<group>"; };
+		8411C80925EAFAF4007D621B /* TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextField.h; sourceTree = "<group>"; };
+		8411C80A25EAFAF4007D621B /* Engine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Engine.cpp; sourceTree = "<group>"; };
+		8411C80B25EAFAF4007D621B /* Buzzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buzzer.h; sourceTree = "<group>"; };
+		8411C80C25EAFAF4007D621B /* WagerState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WagerState.cpp; sourceTree = "<group>"; };
+		8411C80D25EAFAF4007D621B /* Clue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Clue.cpp; sourceTree = "<group>"; };
+		8411C80E25EAFAF4007D621B /* Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Button.h; sourceTree = "<group>"; };
+		8411C80F25EAFAF4007D621B /* ClueState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClueState.h; sourceTree = "<group>"; };
+		8411C81025EAFAF4007D621B /* PickState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PickState.cpp; sourceTree = "<group>"; };
+		8411C81125EAFAF4007D621B /* DrawablePlayerBoard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawablePlayerBoard.cpp; sourceTree = "<group>"; };
+		8411C81225EAFAF4007D621B /* JeopardyGameClient-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "JeopardyGameClient-Info.plist"; sourceTree = "<group>"; };
+		8411C81325EAFAF4007D621B /* IntroState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntroState.cpp; sourceTree = "<group>"; };
+		8411C81525EAFAF4007D621B /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Button.cpp; sourceTree = "<group>"; };
+		8411C81725EAFAF4007D621B /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
+		8411C81825EAFAF4007D621B /* LobbyState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LobbyState.h; sourceTree = "<group>"; };
+		8411C81925EAFAF4007D621B /* Podiums.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Podiums.cpp; sourceTree = "<group>"; };
+		8411C81A25EAFAF4007D621B /* Client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Client.cpp; sourceTree = "<group>"; };
+		8411C81B25EAFAF4007D621B /* DrawablePlayerBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawablePlayerBoard.h; sourceTree = "<group>"; };
+		8411C81C25EAFAF4007D621B /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		8411C81D25EAFAF4007D621B /* PlayState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayState.cpp; sourceTree = "<group>"; };
+		8411C81E25EAFAF4007D621B /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		8411C81F25EAFAF4007D621B /* TextField.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextField.cpp; sourceTree = "<group>"; };
+		8411C82125EAFAF4007D621B /* WagerState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WagerState.h; sourceTree = "<group>"; };
+		8411C82225EAFAF5007D621B /* GameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
+		8411C82325EAFAF5007D621B /* Podium.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Podium.h; sourceTree = "<group>"; };
+		8411C82425EAFAF5007D621B /* IntroState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroState.h; sourceTree = "<group>"; };
+		8411C82525EAFAF5007D621B /* Buzzer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Buzzer.cpp; sourceTree = "<group>"; };
+		8411C82625EAFAF5007D621B /* Question.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Question.cpp; sourceTree = "<group>"; };
+		8411C82725EAFAF5007D621B /* PlayerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerInfo.h; sourceTree = "<group>"; };
+		8411C82825EAFAF5007D621B /* Podium.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Podium.cpp; sourceTree = "<group>"; };
+		8411C82925EAFAF5007D621B /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		8411C82A25EAFAF5007D621B /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		8411C82B25EAFAF5007D621B /* Podiums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Podiums.h; sourceTree = "<group>"; };
+		8411C82D25EAFAF5007D621B /* BuzzInState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BuzzInState.cpp; sourceTree = "<group>"; };
 		8464C4EE25E9E7A900596BE0 /* JeopardyGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JeopardyGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8464C4F225E9E7A900596BE0 /* JeopardyGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "JeopardyGame-Info.plist"; path = "../JeopardyGame-Info.plist"; sourceTree = "<group>"; };
-		8464C4F325E9E7A900596BE0 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
-		8464C4F525E9E7A900596BE0 /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
-		8464C4F625E9E7A900596BE0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		8464C4F925E9E7A900596BE0 /* cute_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cute_image.jpg; path = ../cute_image.jpg; sourceTree = "<group>"; };
-		8464C4FB25E9E7A900596BE0 /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; name = nice_music.ogg; path = ../nice_music.ogg; sourceTree = "<group>"; };
-		8464C4FD25E9E7A900596BE0 /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sansation.ttf; path = ../sansation.ttf; sourceTree = "<group>"; };
-		8464C4FF25E9E7A900596BE0 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
+		8464C50F25E9E98500596BE0 /* JeopardyGameClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JeopardyGameClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8464C51225E9E98500596BE0 /* JeopardyGameClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "JeopardyGameClient-Info.plist"; path = "../JeopardyGameClient-Info.plist"; sourceTree = "<group>"; };
+		8464C51325E9E98500596BE0 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
+		8464C51525E9E98500596BE0 /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
+		8464C51625E9E98500596BE0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8464C52B25E9E9AE00596BE0 /* JeopardyGameServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JeopardyGameServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8464C52E25E9E9AE00596BE0 /* JeopardyGameServer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "JeopardyGameServer-Info.plist"; path = "../JeopardyGameServer-Info.plist"; sourceTree = "<group>"; };
+		8464C52F25E9E9AE00596BE0 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
+		8464C53125E9E9AE00596BE0 /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
+		8464C53225E9E9AE00596BE0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8492C12825EAFDA6005BFCF9 /* JeopardyGameClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "JeopardyGameClient-Info.plist"; path = "../../../JeopardyGameClient-Info.plist"; sourceTree = "<group>"; };
+		8492C13325EAFE63005BFCF9 /* Shared.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shared.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84BF7B6A25EC71910028B0DF /* season15.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season15.tsv; sourceTree = "<group>"; };
+		84BF7B6B25EC71920028B0DF /* season36.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season36.tsv; sourceTree = "<group>"; };
+		84BF7B6C25EC71920028B0DF /* season19.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season19.tsv; sourceTree = "<group>"; };
+		84BF7B6D25EC71920028B0DF /* season12.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season12.tsv; sourceTree = "<group>"; };
+		84BF7B6E25EC71920028B0DF /* season25.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season25.tsv; sourceTree = "<group>"; };
+		84BF7B6F25EC71920028B0DF /* season30.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season30.tsv; sourceTree = "<group>"; };
+		84BF7B7025EC71920028B0DF /* season33.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season33.tsv; sourceTree = "<group>"; };
+		84BF7B7125EC71920028B0DF /* season7.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season7.tsv; sourceTree = "<group>"; };
+		84BF7B7225EC71920028B0DF /* season10.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season10.tsv; sourceTree = "<group>"; };
+		84BF7B7325EC71920028B0DF /* season22.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season22.tsv; sourceTree = "<group>"; };
+		84BF7B7425EC71920028B0DF /* season21.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season21.tsv; sourceTree = "<group>"; };
+		84BF7B7525EC71920028B0DF /* season8.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season8.tsv; sourceTree = "<group>"; };
+		84BF7B7625EC71920028B0DF /* season27.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season27.tsv; sourceTree = "<group>"; };
+		84BF7B7725EC71920028B0DF /* season16.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season16.tsv; sourceTree = "<group>"; };
+		84BF7B7825EC71930028B0DF /* season28.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season28.tsv; sourceTree = "<group>"; };
+		84BF7B7925EC71930028B0DF /* season26.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season26.tsv; sourceTree = "<group>"; };
+		84BF7B7A25EC71930028B0DF /* season32.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season32.tsv; sourceTree = "<group>"; };
+		84BF7B7B25EC71930028B0DF /* season34.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season34.tsv; sourceTree = "<group>"; };
+		84BF7B7C25EC71930028B0DF /* season17.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season17.tsv; sourceTree = "<group>"; };
+		84BF7B7D25EC71930028B0DF /* season24.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season24.tsv; sourceTree = "<group>"; };
+		84BF7B7E25EC71930028B0DF /* season1.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season1.tsv; sourceTree = "<group>"; };
+		84BF7B7F25EC71930028B0DF /* season18.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season18.tsv; sourceTree = "<group>"; };
+		84BF7B8025EC71930028B0DF /* season13.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season13.tsv; sourceTree = "<group>"; };
+		84BF7B8125EC71930028B0DF /* season23.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season23.tsv; sourceTree = "<group>"; };
+		84BF7B8225EC71930028B0DF /* season3.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season3.tsv; sourceTree = "<group>"; };
+		84BF7B8325EC71930028B0DF /* season9.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season9.tsv; sourceTree = "<group>"; };
+		84BF7B8425EC71930028B0DF /* season11.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season11.tsv; sourceTree = "<group>"; };
+		84BF7B8525EC71940028B0DF /* season20.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season20.tsv; sourceTree = "<group>"; };
+		84BF7B8625EC71940028B0DF /* season35.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season35.tsv; sourceTree = "<group>"; };
+		84BF7B8725EC71940028B0DF /* season6.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season6.tsv; sourceTree = "<group>"; };
+		84BF7B8825EC71940028B0DF /* season2.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season2.tsv; sourceTree = "<group>"; };
+		84BF7B8925EC71940028B0DF /* season31.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season31.tsv; sourceTree = "<group>"; };
+		84BF7B8A25EC71940028B0DF /* season5.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season5.tsv; sourceTree = "<group>"; };
+		84BF7B8B25EC71940028B0DF /* season29.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season29.tsv; sourceTree = "<group>"; };
+		84BF7B8C25EC71940028B0DF /* season14.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season14.tsv; sourceTree = "<group>"; };
+		84BF7B8D25EC71940028B0DF /* season4.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season4.tsv; sourceTree = "<group>"; };
+		84BF7BBB25EC72180028B0DF /* GameMessage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMessage.cpp; sourceTree = "<group>"; };
+		84BF7BBC25EC72180028B0DF /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
+		84BF7BBD25EC72180028B0DF /* GameMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMessage.h; sourceTree = "<group>"; };
+		84BF7BBE25EC72180028B0DF /* Utils.H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Utils.H; sourceTree = "<group>"; };
+		84F88F2C25EB0524005580D9 /* GameBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBoard.h; sourceTree = "<group>"; };
+		84F88F2D25EB0524005580D9 /* SWagerState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWagerState.h; sourceTree = "<group>"; };
+		84F88F2E25EB0524005580D9 /* SWagerState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SWagerState.cpp; sourceTree = "<group>"; };
+		84F88F2F25EB0524005580D9 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		84F88F3025EB0524005580D9 /* GameBoard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameBoard.cpp; sourceTree = "<group>"; };
+		84F88F3125EB0524005580D9 /* SPlayState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPlayState.h; sourceTree = "<group>"; };
+		84F88F3225EB0524005580D9 /* SBuzzInState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SBuzzInState.cpp; sourceTree = "<group>"; };
+		84F88F3325EB0524005580D9 /* SubRound.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SubRound.cpp; sourceTree = "<group>"; };
+		84F88F3425EB0524005580D9 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		84F88F3525EB0524005580D9 /* SGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGameState.h; sourceTree = "<group>"; };
+		84F88F3625EB0524005580D9 /* SIntroState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SIntroState.cpp; sourceTree = "<group>"; };
+		84F88F3725EB0524005580D9 /* SPickState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SPickState.cpp; sourceTree = "<group>"; };
+		84F88F3825EB0524005580D9 /* SPlayState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SPlayState.cpp; sourceTree = "<group>"; };
+		84F88F3925EB0524005580D9 /* Server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Server.cpp; sourceTree = "<group>"; };
+		84F88F3A25EB0525005580D9 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		84F88F3B25EB0525005580D9 /* SubRound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubRound.h; sourceTree = "<group>"; };
+		84F88F3C25EB0525005580D9 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		84F88F3D25EB0525005580D9 /* DatasetReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DatasetReader.cpp; sourceTree = "<group>"; };
+		84F88F3E25EB0525005580D9 /* SBuzzInState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBuzzInState.h; sourceTree = "<group>"; };
+		84F88F3F25EB0525005580D9 /* DatasetReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatasetReader.h; sourceTree = "<group>"; };
+		84F88F4025EB0525005580D9 /* Clue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Clue.cpp; sourceTree = "<group>"; };
+		84F88F4125EB0525005580D9 /* GameEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEvent.h; sourceTree = "<group>"; };
+		84F88F4225EB0525005580D9 /* SIntroState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIntroState.h; sourceTree = "<group>"; };
+		84F88F4325EB0525005580D9 /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
+		84F88F4425EB0525005580D9 /* SPickState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPickState.h; sourceTree = "<group>"; };
+		84F88F4525EB0525005580D9 /* JeopardyGameServer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "JeopardyGameServer-Info.plist"; sourceTree = "<group>"; };
+		84F88F4725EB0525005580D9 /* Clue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Clue.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8464C4EA25E9E7A900596BE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8464C50B25E9E98500596BE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8464C52725E9E9AE00596BE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8492C12F25EAFE63005BFCF9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,7 +267,9 @@
 		8464C4E425E9E7A900596BE0 = {
 			isa = PBXGroup;
 			children = (
-				8464C4F025E9E7A900596BE0 /* JeopardyGame */,
+				84BF7BB625EC71CF0028B0DF /* Shared */,
+				8464C51025E9E98500596BE0 /* JeopardyGameClient */,
+				8464C52C25E9E9AE00596BE0 /* JeopardyGameServer */,
 				8464C4EF25E9E7A900596BE0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,39 +278,206 @@
 			isa = PBXGroup;
 			children = (
 				8464C4EE25E9E7A900596BE0 /* JeopardyGame.app */,
+				8464C50F25E9E98500596BE0 /* JeopardyGameClient.app */,
+				8464C52B25E9E9AE00596BE0 /* JeopardyGameServer.app */,
+				8492C13325EAFE63005BFCF9 /* Shared.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8464C4F025E9E7A900596BE0 /* JeopardyGame */ = {
+		8464C51025E9E98500596BE0 /* JeopardyGameClient */ = {
 			isa = PBXGroup;
 			children = (
-				8464C4F325E9E7A900596BE0 /* ResourcePath.mm */,
-				8464C4F525E9E7A900596BE0 /* ResourcePath.hpp */,
-				8464C4F625E9E7A900596BE0 /* main.cpp */,
-				8464C4F825E9E7A900596BE0 /* Resources */,
-				8464C4F125E9E7A900596BE0 /* Supporting Files */,
+				8411C81A25EAFAF4007D621B /* Client.cpp */,
+				8411C80A25EAFAF4007D621B /* Engine.cpp */,
+				8464C51625E9E98500596BE0 /* main.cpp */,
+				8411C82A25EAFAF5007D621B /* Player.cpp */,
+				8411C80225EAFAF4007D621B /* PlayerInfo.cpp */,
+				8411C82625EAFAF5007D621B /* Question.cpp */,
+				8411C81E25EAFAF4007D621B /* Client.h */,
+				8411C81725EAFAF4007D621B /* Engine.h */,
+				8411C81C25EAFAF4007D621B /* Player.h */,
+				8411C82725EAFAF5007D621B /* PlayerInfo.h */,
+				8411C82925EAFAF5007D621B /* Question.h */,
+				8464C51525E9E98500596BE0 /* ResourcePath.hpp */,
+				8464C51325E9E98500596BE0 /* ResourcePath.mm */,
+				8411C81225EAFAF4007D621B /* JeopardyGameClient-Info.plist */,
+				8464C51825E9E98500596BE0 /* Resources */,
+				8492C11E25EAFC9F005BFCF9 /* UI Elements */,
+				8492C11D25EAFC86005BFCF9 /* States */,
+				8464C51125E9E98500596BE0 /* Supporting Files */,
 			);
-			path = JeopardyGame;
+			path = JeopardyGameClient;
 			sourceTree = "<group>";
 		};
-		8464C4F125E9E7A900596BE0 /* Supporting Files */ = {
+		8464C51125E9E98500596BE0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8464C4F225E9E7A900596BE0 /* JeopardyGame-Info.plist */,
+				8464C51225E9E98500596BE0 /* JeopardyGameClient-Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8464C4F825E9E7A900596BE0 /* Resources */ = {
+		8464C51825E9E98500596BE0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8464C4F925E9E7A900596BE0 /* cute_image.jpg */,
-				8464C4FB25E9E7A900596BE0 /* nice_music.ogg */,
-				8464C4FD25E9E7A900596BE0 /* sansation.ttf */,
-				8464C4FF25E9E7A900596BE0 /* icon.png */,
+			);
+			name = Resources;
+			path = "Supporting Files/Resources";
+			sourceTree = "<group>";
+		};
+		8464C52C25E9E9AE00596BE0 /* JeopardyGameServer */ = {
+			isa = PBXGroup;
+			children = (
+				84F88F4025EB0525005580D9 /* Clue.cpp */,
+				84F88F4725EB0525005580D9 /* Clue.h */,
+				84F88F3F25EB0525005580D9 /* DatasetReader.h */,
+				84F88F2F25EB0524005580D9 /* Game.cpp */,
+				84F88F3C25EB0525005580D9 /* Game.h */,
+				84F88F3025EB0524005580D9 /* GameBoard.cpp */,
+				84F88F2C25EB0524005580D9 /* GameBoard.h */,
+				84F88F4125EB0525005580D9 /* GameEvent.h */,
+				84F88F4525EB0525005580D9 /* JeopardyGameServer-Info.plist */,
+				8464C53225E9E9AE00596BE0 /* main.cpp */,
+				84F88F3425EB0524005580D9 /* Player.cpp */,
+				84F88F3A25EB0525005580D9 /* Player.h */,
+				8464C53125E9E9AE00596BE0 /* ResourcePath.hpp */,
+				84F88F3D25EB0525005580D9 /* DatasetReader.cpp */,
+				8464C52F25E9E9AE00596BE0 /* ResourcePath.mm */,
+				8464C53425E9E9AE00596BE0 /* Resources */,
+				84F88F3225EB0524005580D9 /* SBuzzInState.cpp */,
+				84F88F3E25EB0525005580D9 /* SBuzzInState.h */,
+				84F88F3925EB0524005580D9 /* Server.cpp */,
+				84F88F4325EB0525005580D9 /* Server.h */,
+				84F88F3525EB0524005580D9 /* SGameState.h */,
+				84F88F3625EB0524005580D9 /* SIntroState.cpp */,
+				84F88F4225EB0525005580D9 /* SIntroState.h */,
+				84F88F3725EB0524005580D9 /* SPickState.cpp */,
+				84F88F4425EB0525005580D9 /* SPickState.h */,
+				84F88F3825EB0524005580D9 /* SPlayState.cpp */,
+				84F88F3125EB0524005580D9 /* SPlayState.h */,
+				84F88F3325EB0524005580D9 /* SubRound.cpp */,
+				84F88F3B25EB0525005580D9 /* SubRound.h */,
+				8464C52D25E9E9AE00596BE0 /* Supporting Files */,
+				84F88F2E25EB0524005580D9 /* SWagerState.cpp */,
+				84F88F2D25EB0524005580D9 /* SWagerState.h */,
+			);
+			path = JeopardyGameServer;
+			sourceTree = "<group>";
+		};
+		8464C52D25E9E9AE00596BE0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8464C52E25E9E9AE00596BE0 /* JeopardyGameServer-Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8464C53425E9E9AE00596BE0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84ADED8E25EB100C001298E0 /* Datasets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		8492C11D25EAFC86005BFCF9 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				8492C12825EAFDA6005BFCF9 /* JeopardyGameClient-Info.plist */,
+				8411C82D25EAFAF5007D621B /* BuzzInState.cpp */,
+				8411C80425EAFAF4007D621B /* BuzzInState.h */,
+				8411C80325EAFAF4007D621B /* ClueState.cpp */,
+				8411C80F25EAFAF4007D621B /* ClueState.h */,
+				8411C82225EAFAF5007D621B /* GameState.h */,
+				8411C81325EAFAF4007D621B /* IntroState.cpp */,
+				8411C82425EAFAF5007D621B /* IntroState.h */,
+				8411C80525EAFAF4007D621B /* LobbyState.cpp */,
+				8411C81825EAFAF4007D621B /* LobbyState.h */,
+				8411C81025EAFAF4007D621B /* PickState.cpp */,
+				8411C80625EAFAF4007D621B /* PickState.h */,
+				8411C81D25EAFAF4007D621B /* PlayState.cpp */,
+				8411C80725EAFAF4007D621B /* PlayState.h */,
+				8411C80C25EAFAF4007D621B /* WagerState.cpp */,
+				8411C82125EAFAF4007D621B /* WagerState.h */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
+		8492C11E25EAFC9F005BFCF9 /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				8411C81525EAFAF4007D621B /* Button.cpp */,
+				8411C80E25EAFAF4007D621B /* Button.h */,
+				8411C82525EAFAF5007D621B /* Buzzer.cpp */,
+				8411C80B25EAFAF4007D621B /* Buzzer.h */,
+				8411C80D25EAFAF4007D621B /* Clue.cpp */,
+				8411C80825EAFAF4007D621B /* Clue.h */,
+				8411C81125EAFAF4007D621B /* DrawablePlayerBoard.cpp */,
+				8411C81B25EAFAF4007D621B /* DrawablePlayerBoard.h */,
+				8411C82825EAFAF5007D621B /* Podium.cpp */,
+				8411C82325EAFAF5007D621B /* Podium.h */,
+				8411C81925EAFAF4007D621B /* Podiums.cpp */,
+				8411C82B25EAFAF5007D621B /* Podiums.h */,
+				8411C81F25EAFAF4007D621B /* TextField.cpp */,
+				8411C80925EAFAF4007D621B /* TextField.h */,
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
+		};
+		84ADED8E25EB100C001298E0 /* Datasets */ = {
+			isa = PBXGroup;
+			children = (
+				84BF7B7E25EC71930028B0DF /* season1.tsv */,
+				84BF7B8825EC71940028B0DF /* season2.tsv */,
+				84BF7B8225EC71930028B0DF /* season3.tsv */,
+				84BF7B8D25EC71940028B0DF /* season4.tsv */,
+				84BF7B8A25EC71940028B0DF /* season5.tsv */,
+				84BF7B8725EC71940028B0DF /* season6.tsv */,
+				84BF7B7125EC71920028B0DF /* season7.tsv */,
+				84BF7B7525EC71920028B0DF /* season8.tsv */,
+				84BF7B8325EC71930028B0DF /* season9.tsv */,
+				84BF7B7225EC71920028B0DF /* season10.tsv */,
+				84BF7B8425EC71930028B0DF /* season11.tsv */,
+				84BF7B6D25EC71920028B0DF /* season12.tsv */,
+				84BF7B8025EC71930028B0DF /* season13.tsv */,
+				84BF7B8C25EC71940028B0DF /* season14.tsv */,
+				84BF7B6A25EC71910028B0DF /* season15.tsv */,
+				84BF7B7725EC71920028B0DF /* season16.tsv */,
+				84BF7B7C25EC71930028B0DF /* season17.tsv */,
+				84BF7B7F25EC71930028B0DF /* season18.tsv */,
+				84BF7B6C25EC71920028B0DF /* season19.tsv */,
+				84BF7B8525EC71940028B0DF /* season20.tsv */,
+				84BF7B7425EC71920028B0DF /* season21.tsv */,
+				84BF7B7325EC71920028B0DF /* season22.tsv */,
+				84BF7B8125EC71930028B0DF /* season23.tsv */,
+				84BF7B7D25EC71930028B0DF /* season24.tsv */,
+				84BF7B6E25EC71920028B0DF /* season25.tsv */,
+				84BF7B7925EC71930028B0DF /* season26.tsv */,
+				84BF7B7625EC71920028B0DF /* season27.tsv */,
+				84BF7B7825EC71930028B0DF /* season28.tsv */,
+				84BF7B8B25EC71940028B0DF /* season29.tsv */,
+				84BF7B6F25EC71920028B0DF /* season30.tsv */,
+				84BF7B8925EC71940028B0DF /* season31.tsv */,
+				84BF7B7A25EC71930028B0DF /* season32.tsv */,
+				84BF7B7025EC71920028B0DF /* season33.tsv */,
+				84BF7B7B25EC71930028B0DF /* season34.tsv */,
+				84BF7B8625EC71940028B0DF /* season35.tsv */,
+				84BF7B6B25EC71920028B0DF /* season36.tsv */,
+			);
+			name = Datasets;
+			path = JeopardyGameServer/Datasets;
+			sourceTree = SOURCE_ROOT;
+		};
+		84BF7BB625EC71CF0028B0DF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				84BF7BBB25EC72180028B0DF /* GameMessage.cpp */,
+				84BF7BBD25EC72180028B0DF /* GameMessage.h */,
+				84BF7BBC25EC72180028B0DF /* Utils.cpp */,
+				84BF7BBE25EC72180028B0DF /* Utils.H */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,10 +495,66 @@
 			buildRules = (
 			);
 			dependencies = (
+				84BF7B5125EC1E2B0028B0DF /* PBXTargetDependency */,
+				84BF7B5325EC1E2B0028B0DF /* PBXTargetDependency */,
 			);
 			name = JeopardyGame;
 			productName = JeopardyGame;
 			productReference = 8464C4EE25E9E7A900596BE0 /* JeopardyGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8464C50E25E9E98500596BE0 /* JeopardyGameClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8464C52125E9E98500596BE0 /* Build configuration list for PBXNativeTarget "JeopardyGameClient" */;
+			buildPhases = (
+				8464C50A25E9E98500596BE0 /* Sources */,
+				8464C50B25E9E98500596BE0 /* Frameworks */,
+				8464C50C25E9E98500596BE0 /* Resources */,
+				8464C50D25E9E98500596BE0 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JeopardyGameClient;
+			productName = JeopardyGameClient;
+			productReference = 8464C50F25E9E98500596BE0 /* JeopardyGameClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8464C52A25E9E9AE00596BE0 /* JeopardyGameServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8464C53D25E9E9AE00596BE0 /* Build configuration list for PBXNativeTarget "JeopardyGameServer" */;
+			buildPhases = (
+				8464C52625E9E9AE00596BE0 /* Sources */,
+				8464C52725E9E9AE00596BE0 /* Frameworks */,
+				8464C52825E9E9AE00596BE0 /* Resources */,
+				8464C52925E9E9AE00596BE0 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JeopardyGameServer;
+			productName = JeopardyGameServer;
+			productReference = 8464C52B25E9E9AE00596BE0 /* JeopardyGameServer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8492C13225EAFE63005BFCF9 /* Shared */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8492C14525EAFE63005BFCF9 /* Build configuration list for PBXNativeTarget "Shared" */;
+			buildPhases = (
+				8492C12E25EAFE63005BFCF9 /* Sources */,
+				8492C12F25EAFE63005BFCF9 /* Frameworks */,
+				8492C13025EAFE63005BFCF9 /* Resources */,
+				8492C13125EAFE63005BFCF9 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Shared;
+			productName = Shared;
+			productReference = 8492C13325EAFE63005BFCF9 /* Shared.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -116,6 +567,15 @@
 				ORGANIZATIONNAME = "Rafay Leghari";
 				TargetAttributes = {
 					8464C4ED25E9E7A900596BE0 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					8464C50E25E9E98500596BE0 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					8464C52A25E9E9AE00596BE0 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					8492C13225EAFE63005BFCF9 = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
@@ -134,6 +594,9 @@
 			projectRoot = "";
 			targets = (
 				8464C4ED25E9E7A900596BE0 /* JeopardyGame */,
+				8464C50E25E9E98500596BE0 /* JeopardyGameClient */,
+				8464C52A25E9E9AE00596BE0 /* JeopardyGameServer */,
+				8492C13225EAFE63005BFCF9 /* Shared */,
 			);
 		};
 /* End PBXProject section */
@@ -143,10 +606,65 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8464C50025E9E7A900596BE0 /* icon.png in Resources */,
-				8464C4FE25E9E7A900596BE0 /* sansation.ttf in Resources */,
-				8464C4FC25E9E7A900596BE0 /* nice_music.ogg in Resources */,
-				8464C4FA25E9E7A900596BE0 /* cute_image.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8464C50C25E9E98500596BE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8411C83625EAFAF5007D621B /* JeopardyGameClient-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8464C52825E9E9AE00596BE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84BF7B8E25EC71940028B0DF /* season15.tsv in Resources */,
+				84BF7B9225EC71940028B0DF /* season25.tsv in Resources */,
+				84BF7B8F25EC71940028B0DF /* season36.tsv in Resources */,
+				84BF7B9325EC71940028B0DF /* season30.tsv in Resources */,
+				84BF7BAA25EC71940028B0DF /* season35.tsv in Resources */,
+				84BF7BA525EC71940028B0DF /* season23.tsv in Resources */,
+				84BF7BA425EC71940028B0DF /* season13.tsv in Resources */,
+				84BF7BA025EC71940028B0DF /* season17.tsv in Resources */,
+				84BF7B9B25EC71940028B0DF /* season16.tsv in Resources */,
+				84BF7BA325EC71940028B0DF /* season18.tsv in Resources */,
+				84BF7B9925EC71940028B0DF /* season8.tsv in Resources */,
+				84BF7BA125EC71940028B0DF /* season24.tsv in Resources */,
+				84BF7B9025EC71940028B0DF /* season19.tsv in Resources */,
+				84BF7BAD25EC71940028B0DF /* season31.tsv in Resources */,
+				84BF7B9E25EC71940028B0DF /* season32.tsv in Resources */,
+				84F88F5425EB0525005580D9 /* JeopardyGameServer-Info.plist in Resources */,
+				84BF7BAB25EC71940028B0DF /* season6.tsv in Resources */,
+				84BF7BA925EC71940028B0DF /* season20.tsv in Resources */,
+				84BF7BAE25EC71940028B0DF /* season5.tsv in Resources */,
+				84BF7BAC25EC71940028B0DF /* season2.tsv in Resources */,
+				84BF7BA625EC71940028B0DF /* season3.tsv in Resources */,
+				84BF7B9725EC71940028B0DF /* season22.tsv in Resources */,
+				84BF7BA225EC71940028B0DF /* season1.tsv in Resources */,
+				84BF7B9825EC71940028B0DF /* season21.tsv in Resources */,
+				84BF7BA825EC71940028B0DF /* season11.tsv in Resources */,
+				84BF7BB025EC71940028B0DF /* season14.tsv in Resources */,
+				84BF7B9C25EC71940028B0DF /* season28.tsv in Resources */,
+				84BF7B9A25EC71940028B0DF /* season27.tsv in Resources */,
+				84BF7BA725EC71940028B0DF /* season9.tsv in Resources */,
+				84BF7B9425EC71940028B0DF /* season33.tsv in Resources */,
+				84BF7BB125EC71940028B0DF /* season4.tsv in Resources */,
+				84BF7BAF25EC71940028B0DF /* season29.tsv in Resources */,
+				84BF7B9125EC71940028B0DF /* season12.tsv in Resources */,
+				84BF7B9D25EC71940028B0DF /* season26.tsv in Resources */,
+				84BF7B9525EC71940028B0DF /* season7.tsv in Resources */,
+				84BF7B9F25EC71940028B0DF /* season34.tsv in Resources */,
+				84BF7B9625EC71940028B0DF /* season10.tsv in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8492C13025EAFE63005BFCF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +672,57 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		8464C4EC25E9E7A900596BE0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# This shell script simply copies required SFML dylibs/frameworks into the application bundle frameworks folder.\n# If you're using static libraries (which is not recommended) you should remove this script from your project.\n\n# SETTINGS\nSFML_DEPENDENCIES_INSTALL_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks\"\nCMAKE_INSTALL_FRAMEWORK_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks\"\nCMAKE_INSTALL_LIB_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks/lib\"\nFRAMEWORKS_FULL_PATH=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n# Are we building a project that uses frameworks or dylibs?\ncase \"$SFML_BINARY_TYPE\" in\n    DYLIBS)\n        frameworks=\"false\"\n        ;;\n    *)\n        frameworks=\"true\"\n        ;;\nesac\n\n# Echoes to stderr\nerror () # $* message to display\n{\n    echo $* 1>&2\n    exit 2\n}\n\nassert () # $1 is a boolean, $2...N is an error message\n{\n    if [ $# -lt 2 ]\n    then\n        error \"Internal error in assert: not enough args\"\n    fi\n\n    if [ $1 -ne 0 ]\n    then\n        shift\n        error \"$*\"\n    fi\n}\n\nforce_remove () # $@ is some paths\n{\n    test $# -ge 1\n    assert $? \"force_remove() requires at least one parameter\"\n    rm -fr $@\n    assert $? \"couldn't remove $@\"\n}\n\ncopy () # $1 is a source, $2 is a destination\n{\n    test $# -eq 2\n    assert $? \"copy() requires two parameters\"\n    ditto \"$1\" \"$2\"\n    assert $? \"couldn't copy $1 to $2\"\n}\n\nrequire () # $1 is a SFML module like 'system' or 'audio'\n{\n    dest=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n    if [ -z \"$1\" ]\n    then\n        error \"require() requires one parameter!\"\n    else\n        # clean potentially old stuff\n        force_remove \"$dest/libsfml-$1\"*\n        force_remove \"$dest/sfml-$1.framework\"\n\n        # copy SFML libraries\n        if [ \"$frameworks\" = \"true\" ]\n        then\n            source=\"$CMAKE_INSTALL_FRAMEWORK_PREFIX/sfml-$1.framework\"\n            target=\"sfml-$1.framework\"\n        elif [ \"$SFML_LINK_DYLIBS_SUFFIX\" = \"-d\" ]\n        then\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1-d.dylib\"\n            target=\"`readlink $source`\"\n        else\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1.dylib\"\n            target=\"`readlink $source`\"\n        fi\n\n        copy \"$source\" \"$dest/$target\"\n\n        # copy extra dependencies\n        if [ \"$1\" = \"audio\" ]\n        then\n            # copy \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\" frameworks too\n            for f in \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\"\n            do\n                copy \"$SFML_DEPENDENCIES_INSTALL_PREFIX/$f.framework\" \"$dest/$f.framework\"\n            done\n        elif [ \"$1\" = \"graphics\" ]\n        then\n            copy \"$SFML_DEPENDENCIES_INSTALL_PREFIX/freetype.framework\" \"$dest/freetype.framework\"\n        fi\n    fi\n}\n\nif [ -n \"$SFML_SYSTEM\" ]\nthen\n    require \"system\"\nfi\n\nif [ -n \"$SFML_AUDIO\" ]\nthen\n    require \"audio\"\nfi\n\nif [ -n \"$SFML_NETWORK\" ]\nthen\n    require \"network\"\nfi\n\nif [ -n \"$SFML_WINDOW\" ]\nthen\n    require \"window\"\nfi\n\nif [ -n \"$SFML_GRAPHICS\" ]\nthen\n    require \"graphics\"\nfi\n\n                \n";
+		};
+		8464C50D25E9E98500596BE0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# This shell script simply copies required SFML dylibs/frameworks into the application bundle frameworks folder.\n# If you're using static libraries (which is not recommended) you should remove this script from your project.\n\n# SETTINGS\nSFML_DEPENDENCIES_INSTALL_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks\"\nCMAKE_INSTALL_FRAMEWORK_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks\"\nCMAKE_INSTALL_LIB_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks/lib\"\nFRAMEWORKS_FULL_PATH=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n# Are we building a project that uses frameworks or dylibs?\ncase \"$SFML_BINARY_TYPE\" in\n    DYLIBS)\n        frameworks=\"false\"\n        ;;\n    *)\n        frameworks=\"true\"\n        ;;\nesac\n\n# Echoes to stderr\nerror () # $* message to display\n{\n    echo $* 1>&2\n    exit 2\n}\n\nassert () # $1 is a boolean, $2...N is an error message\n{\n    if [ $# -lt 2 ]\n    then\n        error \"Internal error in assert: not enough args\"\n    fi\n\n    if [ $1 -ne 0 ]\n    then\n        shift\n        error \"$*\"\n    fi\n}\n\nforce_remove () # $@ is some paths\n{\n    test $# -ge 1\n    assert $? \"force_remove() requires at least one parameter\"\n    rm -fr $@\n    assert $? \"couldn't remove $@\"\n}\n\ncopy () # $1 is a source, $2 is a destination\n{\n    test $# -eq 2\n    assert $? \"copy() requires two parameters\"\n    ditto \"$1\" \"$2\"\n    assert $? \"couldn't copy $1 to $2\"\n}\n\nrequire () # $1 is a SFML module like 'system' or 'audio'\n{\n    dest=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n    if [ -z \"$1\" ]\n    then\n        error \"require() requires one parameter!\"\n    else\n        # clean potentially old stuff\n        force_remove \"$dest/libsfml-$1\"*\n        force_remove \"$dest/sfml-$1.framework\"\n\n        # copy SFML libraries\n        if [ \"$frameworks\" = \"true\" ]\n        then\n            source=\"$CMAKE_INSTALL_FRAMEWORK_PREFIX/sfml-$1.framework\"\n            target=\"sfml-$1.framework\"\n        elif [ \"$SFML_LINK_DYLIBS_SUFFIX\" = \"-d\" ]\n        then\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1-d.dylib\"\n            target=\"`readlink $source`\"\n        else\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1.dylib\"\n            target=\"`readlink $source`\"\n        fi\n\n        copy \"$source\" \"$dest/$target\"\n\n        # copy extra dependencies\n        if [ \"$1\" = \"audio\" ]\n        then\n            # copy \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\" frameworks too\n            for f in \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\"\n            do\n                copy \"$SFML_DEPENDENCIES_INSTALL_PREFIX/$f.framework\" \"$dest/$f.framework\"\n            done\n        elif [ \"$1\" = \"graphics\" ]\n        then\n            copy \"$SFML_DEPENDENCIES_INSTALL_PREFIX/freetype.framework\" \"$dest/freetype.framework\"\n        fi\n    fi\n}\n\nif [ -n \"$SFML_SYSTEM\" ]\nthen\n    require \"system\"\nfi\n\nif [ -n \"$SFML_AUDIO\" ]\nthen\n    require \"audio\"\nfi\n\nif [ -n \"$SFML_NETWORK\" ]\nthen\n    require \"network\"\nfi\n\nif [ -n \"$SFML_WINDOW\" ]\nthen\n    require \"window\"\nfi\n\nif [ -n \"$SFML_GRAPHICS\" ]\nthen\n    require \"graphics\"\nfi\n\n                \n";
+		};
+		8464C52925E9E9AE00596BE0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# This shell script simply copies required SFML dylibs/frameworks into the application bundle frameworks folder.\n# If you're using static libraries (which is not recommended) you should remove this script from your project.\n\n# SETTINGS\nSFML_DEPENDENCIES_INSTALL_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks\"\nCMAKE_INSTALL_FRAMEWORK_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks\"\nCMAKE_INSTALL_LIB_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks/lib\"\nFRAMEWORKS_FULL_PATH=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n# Are we building a project that uses frameworks or dylibs?\ncase \"$SFML_BINARY_TYPE\" in\n    DYLIBS)\n        frameworks=\"false\"\n        ;;\n    *)\n        frameworks=\"true\"\n        ;;\nesac\n\n# Echoes to stderr\nerror () # $* message to display\n{\n    echo $* 1>&2\n    exit 2\n}\n\nassert () # $1 is a boolean, $2...N is an error message\n{\n    if [ $# -lt 2 ]\n    then\n        error \"Internal error in assert: not enough args\"\n    fi\n\n    if [ $1 -ne 0 ]\n    then\n        shift\n        error \"$*\"\n    fi\n}\n\nforce_remove () # $@ is some paths\n{\n    test $# -ge 1\n    assert $? \"force_remove() requires at least one parameter\"\n    rm -fr $@\n    assert $? \"couldn't remove $@\"\n}\n\ncopy () # $1 is a source, $2 is a destination\n{\n    test $# -eq 2\n    assert $? \"copy() requires two parameters\"\n    ditto \"$1\" \"$2\"\n    assert $? \"couldn't copy $1 to $2\"\n}\n\nrequire () # $1 is a SFML module like 'system' or 'audio'\n{\n    dest=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n    if [ -z \"$1\" ]\n    then\n        error \"require() requires one parameter!\"\n    else\n        # clean potentially old stuff\n        force_remove \"$dest/libsfml-$1\"*\n        force_remove \"$dest/sfml-$1.framework\"\n\n        # copy SFML libraries\n        if [ \"$frameworks\" = \"true\" ]\n        then\n            source=\"$CMAKE_INSTALL_FRAMEWORK_PREFIX/sfml-$1.framework\"\n            target=\"sfml-$1.framework\"\n        elif [ \"$SFML_LINK_DYLIBS_SUFFIX\" = \"-d\" ]\n        then\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1-d.dylib\"\n            target=\"`readlink $source`\"\n        else\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1.dylib\"\n            target=\"`readlink $source`\"\n        fi\n\n        copy \"$source\" \"$dest/$target\"\n\n        # copy extra dependencies\n        if [ \"$1\" = \"audio\" ]\n        then\n            # copy \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\" frameworks too\n            for f in \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\"\n            do\n                copy \"$SFML_DEPENDENCIES_INSTALL_PREFIX/$f.framework\" \"$dest/$f.framework\"\n            done\n        elif [ \"$1\" = \"graphics\" ]\n        then\n            copy \"$SFML_DEPENDENCIES_INSTALL_PREFIX/freetype.framework\" \"$dest/freetype.framework\"\n        fi\n    fi\n}\n\nif [ -n \"$SFML_SYSTEM\" ]\nthen\n    require \"system\"\nfi\n\nif [ -n \"$SFML_AUDIO\" ]\nthen\n    require \"audio\"\nfi\n\nif [ -n \"$SFML_NETWORK\" ]\nthen\n    require \"network\"\nfi\n\nif [ -n \"$SFML_WINDOW\" ]\nthen\n    require \"window\"\nfi\n\nif [ -n \"$SFML_GRAPHICS\" ]\nthen\n    require \"graphics\"\nfi\n\n                \n";
+		};
+		8492C13125EAFE63005BFCF9 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -177,12 +746,89 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8464C4F725E9E7A900596BE0 /* main.cpp in Sources */,
-				8464C4F425E9E7A900596BE0 /* ResourcePath.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8464C50A25E9E98500596BE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84BF7BC525EC724E0028B0DF /* GameMessage.cpp in Sources */,
+				84BF7BC625EC724E0028B0DF /* GameMessage.h in Sources */,
+				84BF7BC725EC724E0028B0DF /* Utils.cpp in Sources */,
+				84BF7BC825EC724E0028B0DF /* Utils.H in Sources */,
+				8411C82F25EAFAF5007D621B /* ClueState.cpp in Sources */,
+				8411C84225EAFAF5007D621B /* Podium.cpp in Sources */,
+				8411C83D25EAFAF5007D621B /* PlayState.cpp in Sources */,
+				8411C83225EAFAF5007D621B /* WagerState.cpp in Sources */,
+				8411C84325EAFAF5007D621B /* Player.cpp in Sources */,
+				8411C83325EAFAF5007D621B /* Clue.cpp in Sources */,
+				8411C83125EAFAF5007D621B /* Engine.cpp in Sources */,
+				8464C51725E9E98500596BE0 /* main.cpp in Sources */,
+				8411C83525EAFAF5007D621B /* DrawablePlayerBoard.cpp in Sources */,
+				8411C84025EAFAF5007D621B /* Buzzer.cpp in Sources */,
+				8411C83E25EAFAF5007D621B /* TextField.cpp in Sources */,
+				8411C84525EAFAF5007D621B /* BuzzInState.cpp in Sources */,
+				8464C51425E9E98500596BE0 /* ResourcePath.mm in Sources */,
+				8411C83B25EAFAF5007D621B /* Podiums.cpp in Sources */,
+				8411C83725EAFAF5007D621B /* IntroState.cpp in Sources */,
+				8411C83025EAFAF5007D621B /* LobbyState.cpp in Sources */,
+				8411C84125EAFAF5007D621B /* Question.cpp in Sources */,
+				8411C83425EAFAF5007D621B /* PickState.cpp in Sources */,
+				8411C82E25EAFAF5007D621B /* PlayerInfo.cpp in Sources */,
+				8411C83C25EAFAF5007D621B /* Client.cpp in Sources */,
+				8411C83925EAFAF5007D621B /* Button.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8464C52625E9E9AE00596BE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84BF7BCD25EC72560028B0DF /* GameMessage.cpp in Sources */,
+				84BF7BCE25EC72560028B0DF /* GameMessage.h in Sources */,
+				84BF7BCF25EC72560028B0DF /* Utils.cpp in Sources */,
+				84BF7BD025EC72560028B0DF /* Utils.H in Sources */,
+				8464C53325E9E9AE00596BE0 /* main.cpp in Sources */,
+				84F88F4E25EB0525005580D9 /* SIntroState.cpp in Sources */,
+				84F88F5325EB0525005580D9 /* Clue.cpp in Sources */,
+				84F88F5125EB0525005580D9 /* Server.cpp in Sources */,
+				84F88F4F25EB0525005580D9 /* SPickState.cpp in Sources */,
+				84F88F5225EB0525005580D9 /* DatasetReader.cpp in Sources */,
+				84F88F4A25EB0525005580D9 /* GameBoard.cpp in Sources */,
+				84F88F4825EB0525005580D9 /* SWagerState.cpp in Sources */,
+				84F88F4D25EB0525005580D9 /* Player.cpp in Sources */,
+				84F88F4925EB0525005580D9 /* Game.cpp in Sources */,
+				8464C53025E9E9AE00596BE0 /* ResourcePath.mm in Sources */,
+				84F88F5025EB0525005580D9 /* SPlayState.cpp in Sources */,
+				84F88F4C25EB0525005580D9 /* SubRound.cpp in Sources */,
+				84F88F4B25EB0525005580D9 /* SBuzzInState.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8492C12E25EAFE63005BFCF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84BF7BBF25EC72180028B0DF /* GameMessage.cpp in Sources */,
+				84BF7BC025EC72180028B0DF /* Utils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84BF7B5125EC1E2B0028B0DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8464C50E25E9E98500596BE0 /* JeopardyGameClient */;
+			targetProxy = 84BF7B5025EC1E2B0028B0DF /* PBXContainerItemProxy */;
+		};
+		84BF7B5325EC1E2B0028B0DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8464C52A25E9E9AE00596BE0 /* JeopardyGameServer */;
+			targetProxy = 84BF7B5225EC1E2B0028B0DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8464C50125E9E7A900596BE0 /* Debug */ = {
@@ -293,6 +939,66 @@
 			};
 			name = Release;
 		};
+		8464C52225E9E98500596BE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "JeopardyGameClient/JeopardyGameClient-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8464C52325E9E98500596BE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "JeopardyGameClient/JeopardyGameClient-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8464C53E25E9E9AE00596BE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "JeopardyGameServer/JeopardyGameServer-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8464C53F25E9E9AE00596BE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "JeopardyGameServer/JeopardyGameServer-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8492C14625EAFE63005BFCF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Shared/Shared-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8492C14725EAFE63005BFCF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Shared/Shared-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -310,6 +1016,33 @@
 			buildConfigurations = (
 				8464C50425E9E7A900596BE0 /* Debug */,
 				8464C50525E9E7A900596BE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8464C52125E9E98500596BE0 /* Build configuration list for PBXNativeTarget "JeopardyGameClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8464C52225E9E98500596BE0 /* Debug */,
+				8464C52325E9E98500596BE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8464C53D25E9E9AE00596BE0 /* Build configuration list for PBXNativeTarget "JeopardyGameServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8464C53E25E9E9AE00596BE0 /* Debug */,
+				8464C53F25E9E9AE00596BE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8492C14525EAFE63005BFCF9 /* Build configuration list for PBXNativeTarget "Shared" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8492C14625EAFE63005BFCF9 /* Debug */,
+				8492C14725EAFE63005BFCF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
