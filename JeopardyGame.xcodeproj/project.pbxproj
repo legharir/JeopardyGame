@@ -67,8 +67,6 @@
 		84BF7BAF25EC71940028B0DF /* season29.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B8B25EC71940028B0DF /* season29.tsv */; };
 		84BF7BB025EC71940028B0DF /* season14.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B8C25EC71940028B0DF /* season14.tsv */; };
 		84BF7BB125EC71940028B0DF /* season4.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B8D25EC71940028B0DF /* season4.tsv */; };
-		84BF7BBF25EC72180028B0DF /* GameMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BF7BBB25EC72180028B0DF /* GameMessage.cpp */; };
-		84BF7BC025EC72180028B0DF /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BF7BBC25EC72180028B0DF /* Utils.cpp */; };
 		84BF7BC525EC724E0028B0DF /* GameMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BF7BBB25EC72180028B0DF /* GameMessage.cpp */; };
 		84BF7BC625EC724E0028B0DF /* GameMessage.h in Sources */ = {isa = PBXBuildFile; fileRef = 84BF7BBD25EC72180028B0DF /* GameMessage.h */; };
 		84BF7BC725EC724E0028B0DF /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BF7BBC25EC72180028B0DF /* Utils.cpp */; };
@@ -77,6 +75,7 @@
 		84BF7BCE25EC72560028B0DF /* GameMessage.h in Sources */ = {isa = PBXBuildFile; fileRef = 84BF7BBD25EC72180028B0DF /* GameMessage.h */; };
 		84BF7BCF25EC72560028B0DF /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BF7BBC25EC72180028B0DF /* Utils.cpp */; };
 		84BF7BD025EC72560028B0DF /* Utils.H in Sources */ = {isa = PBXBuildFile; fileRef = 84BF7BBE25EC72180028B0DF /* Utils.H */; };
+		84BF7BDB25EC837E0028B0DF /* DeadlineBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BF7BD925EC837E0028B0DF /* DeadlineBar.cpp */; };
 		84F88F4825EB0525005580D9 /* SWagerState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F88F2E25EB0524005580D9 /* SWagerState.cpp */; };
 		84F88F4925EB0525005580D9 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F88F2F25EB0524005580D9 /* Game.cpp */; };
 		84F88F4A25EB0525005580D9 /* GameBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F88F3025EB0524005580D9 /* GameBoard.cpp */; };
@@ -91,23 +90,6 @@
 		84F88F5325EB0525005580D9 /* Clue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F88F4025EB0525005580D9 /* Clue.cpp */; };
 		84F88F5425EB0525005580D9 /* JeopardyGameServer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84F88F4525EB0525005580D9 /* JeopardyGameServer-Info.plist */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		84BF7B5025EC1E2B0028B0DF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8464C4E525E9E7A900596BE0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8464C50E25E9E98500596BE0;
-			remoteInfo = JeopardyGameClient;
-		};
-		84BF7B5225EC1E2B0028B0DF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8464C4E525E9E7A900596BE0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8464C52A25E9E9AE00596BE0;
-			remoteInfo = JeopardyGameServer;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8411C80225EAFAF4007D621B /* PlayerInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerInfo.cpp; sourceTree = "<group>"; };
@@ -150,7 +132,6 @@
 		8411C82A25EAFAF5007D621B /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
 		8411C82B25EAFAF5007D621B /* Podiums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Podiums.h; sourceTree = "<group>"; };
 		8411C82D25EAFAF5007D621B /* BuzzInState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BuzzInState.cpp; sourceTree = "<group>"; };
-		8464C4EE25E9E7A900596BE0 /* JeopardyGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JeopardyGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8464C50F25E9E98500596BE0 /* JeopardyGameClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JeopardyGameClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8464C51225E9E98500596BE0 /* JeopardyGameClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "JeopardyGameClient-Info.plist"; path = "../JeopardyGameClient-Info.plist"; sourceTree = "<group>"; };
 		8464C51325E9E98500596BE0 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
@@ -162,7 +143,6 @@
 		8464C53125E9E9AE00596BE0 /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
 		8464C53225E9E9AE00596BE0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8492C12825EAFDA6005BFCF9 /* JeopardyGameClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "JeopardyGameClient-Info.plist"; path = "../../../JeopardyGameClient-Info.plist"; sourceTree = "<group>"; };
-		8492C13325EAFE63005BFCF9 /* Shared.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shared.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BF7B6A25EC71910028B0DF /* season15.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season15.tsv; sourceTree = "<group>"; };
 		84BF7B6B25EC71920028B0DF /* season36.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season36.tsv; sourceTree = "<group>"; };
 		84BF7B6C25EC71920028B0DF /* season19.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season19.tsv; sourceTree = "<group>"; };
@@ -203,6 +183,8 @@
 		84BF7BBC25EC72180028B0DF /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
 		84BF7BBD25EC72180028B0DF /* GameMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMessage.h; sourceTree = "<group>"; };
 		84BF7BBE25EC72180028B0DF /* Utils.H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Utils.H; sourceTree = "<group>"; };
+		84BF7BD925EC837E0028B0DF /* DeadlineBar.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DeadlineBar.cpp; sourceTree = "<group>"; };
+		84BF7BDA25EC837E0028B0DF /* DeadlineBar.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DeadlineBar.hpp; sourceTree = "<group>"; };
 		84F88F2C25EB0524005580D9 /* GameBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBoard.h; sourceTree = "<group>"; };
 		84F88F2D25EB0524005580D9 /* SWagerState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWagerState.h; sourceTree = "<group>"; };
 		84F88F2E25EB0524005580D9 /* SWagerState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SWagerState.cpp; sourceTree = "<group>"; };
@@ -233,13 +215,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8464C4EA25E9E7A900596BE0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8464C50B25E9E98500596BE0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -248,13 +223,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8464C52725E9E9AE00596BE0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8492C12F25EAFE63005BFCF9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -277,10 +245,8 @@
 		8464C4EF25E9E7A900596BE0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8464C4EE25E9E7A900596BE0 /* JeopardyGame.app */,
 				8464C50F25E9E98500596BE0 /* JeopardyGameClient.app */,
 				8464C52B25E9E9AE00596BE0 /* JeopardyGameServer.app */,
-				8492C13325EAFE63005BFCF9 /* Shared.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -421,6 +387,8 @@
 				8411C82B25EAFAF5007D621B /* Podiums.h */,
 				8411C81F25EAFAF4007D621B /* TextField.cpp */,
 				8411C80925EAFAF4007D621B /* TextField.h */,
+				84BF7BD925EC837E0028B0DF /* DeadlineBar.cpp */,
+				84BF7BDA25EC837E0028B0DF /* DeadlineBar.hpp */,
 			);
 			path = "UI Elements";
 			sourceTree = "<group>";
@@ -483,26 +451,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8464C4ED25E9E7A900596BE0 /* JeopardyGame */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8464C50325E9E7A900596BE0 /* Build configuration list for PBXNativeTarget "JeopardyGame" */;
-			buildPhases = (
-				8464C4E925E9E7A900596BE0 /* Sources */,
-				8464C4EA25E9E7A900596BE0 /* Frameworks */,
-				8464C4EB25E9E7A900596BE0 /* Resources */,
-				8464C4EC25E9E7A900596BE0 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				84BF7B5125EC1E2B0028B0DF /* PBXTargetDependency */,
-				84BF7B5325EC1E2B0028B0DF /* PBXTargetDependency */,
-			);
-			name = JeopardyGame;
-			productName = JeopardyGame;
-			productReference = 8464C4EE25E9E7A900596BE0 /* JeopardyGame.app */;
-			productType = "com.apple.product-type.application";
-		};
 		8464C50E25E9E98500596BE0 /* JeopardyGameClient */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8464C52125E9E98500596BE0 /* Build configuration list for PBXNativeTarget "JeopardyGameClient" */;
@@ -539,24 +487,6 @@
 			productReference = 8464C52B25E9E9AE00596BE0 /* JeopardyGameServer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8492C13225EAFE63005BFCF9 /* Shared */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8492C14525EAFE63005BFCF9 /* Build configuration list for PBXNativeTarget "Shared" */;
-			buildPhases = (
-				8492C12E25EAFE63005BFCF9 /* Sources */,
-				8492C12F25EAFE63005BFCF9 /* Frameworks */,
-				8492C13025EAFE63005BFCF9 /* Resources */,
-				8492C13125EAFE63005BFCF9 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Shared;
-			productName = Shared;
-			productReference = 8492C13325EAFE63005BFCF9 /* Shared.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -566,16 +496,10 @@
 				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = "Rafay Leghari";
 				TargetAttributes = {
-					8464C4ED25E9E7A900596BE0 = {
-						CreatedOnToolsVersion = 12.3;
-					};
 					8464C50E25E9E98500596BE0 = {
 						CreatedOnToolsVersion = 12.3;
 					};
 					8464C52A25E9E9AE00596BE0 = {
-						CreatedOnToolsVersion = 12.3;
-					};
-					8492C13225EAFE63005BFCF9 = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
@@ -593,22 +517,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8464C4ED25E9E7A900596BE0 /* JeopardyGame */,
 				8464C50E25E9E98500596BE0 /* JeopardyGameClient */,
 				8464C52A25E9E9AE00596BE0 /* JeopardyGameServer */,
-				8492C13225EAFE63005BFCF9 /* Shared */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8464C4EB25E9E7A900596BE0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8464C50C25E9E98500596BE0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -661,33 +576,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8492C13025EAFE63005BFCF9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8464C4EC25E9E7A900596BE0 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-			shellPath = /bin/sh;
-			shellScript = "# This shell script simply copies required SFML dylibs/frameworks into the application bundle frameworks folder.\n# If you're using static libraries (which is not recommended) you should remove this script from your project.\n\n# SETTINGS\nSFML_DEPENDENCIES_INSTALL_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks\"\nCMAKE_INSTALL_FRAMEWORK_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks\"\nCMAKE_INSTALL_LIB_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks/lib\"\nFRAMEWORKS_FULL_PATH=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n# Are we building a project that uses frameworks or dylibs?\ncase \"$SFML_BINARY_TYPE\" in\n    DYLIBS)\n        frameworks=\"false\"\n        ;;\n    *)\n        frameworks=\"true\"\n        ;;\nesac\n\n# Echoes to stderr\nerror () # $* message to display\n{\n    echo $* 1>&2\n    exit 2\n}\n\nassert () # $1 is a boolean, $2...N is an error message\n{\n    if [ $# -lt 2 ]\n    then\n        error \"Internal error in assert: not enough args\"\n    fi\n\n    if [ $1 -ne 0 ]\n    then\n        shift\n        error \"$*\"\n    fi\n}\n\nforce_remove () # $@ is some paths\n{\n    test $# -ge 1\n    assert $? \"force_remove() requires at least one parameter\"\n    rm -fr $@\n    assert $? \"couldn't remove $@\"\n}\n\ncopy () # $1 is a source, $2 is a destination\n{\n    test $# -eq 2\n    assert $? \"copy() requires two parameters\"\n    ditto \"$1\" \"$2\"\n    assert $? \"couldn't copy $1 to $2\"\n}\n\nrequire () # $1 is a SFML module like 'system' or 'audio'\n{\n    dest=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n    if [ -z \"$1\" ]\n    then\n        error \"require() requires one parameter!\"\n    else\n        # clean potentially old stuff\n        force_remove \"$dest/libsfml-$1\"*\n        force_remove \"$dest/sfml-$1.framework\"\n\n        # copy SFML libraries\n        if [ \"$frameworks\" = \"true\" ]\n        then\n            source=\"$CMAKE_INSTALL_FRAMEWORK_PREFIX/sfml-$1.framework\"\n            target=\"sfml-$1.framework\"\n        elif [ \"$SFML_LINK_DYLIBS_SUFFIX\" = \"-d\" ]\n        then\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1-d.dylib\"\n            target=\"`readlink $source`\"\n        else\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1.dylib\"\n            target=\"`readlink $source`\"\n        fi\n\n        copy \"$source\" \"$dest/$target\"\n\n        # copy extra dependencies\n        if [ \"$1\" = \"audio\" ]\n        then\n            # copy \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\" frameworks too\n            for f in \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\"\n            do\n                copy \"$SFML_DEPENDENCIES_INSTALL_PREFIX/$f.framework\" \"$dest/$f.framework\"\n            done\n        elif [ \"$1\" = \"graphics\" ]\n        then\n            copy \"$SFML_DEPENDENCIES_INSTALL_PREFIX/freetype.framework\" \"$dest/freetype.framework\"\n        fi\n    fi\n}\n\nif [ -n \"$SFML_SYSTEM\" ]\nthen\n    require \"system\"\nfi\n\nif [ -n \"$SFML_AUDIO\" ]\nthen\n    require \"audio\"\nfi\n\nif [ -n \"$SFML_NETWORK\" ]\nthen\n    require \"network\"\nfi\n\nif [ -n \"$SFML_WINDOW\" ]\nthen\n    require \"window\"\nfi\n\nif [ -n \"$SFML_GRAPHICS\" ]\nthen\n    require \"graphics\"\nfi\n\n                \n";
-		};
 		8464C50D25E9E98500596BE0 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 8;
@@ -722,33 +613,9 @@
 			shellPath = /bin/sh;
 			shellScript = "# This shell script simply copies required SFML dylibs/frameworks into the application bundle frameworks folder.\n# If you're using static libraries (which is not recommended) you should remove this script from your project.\n\n# SETTINGS\nSFML_DEPENDENCIES_INSTALL_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks\"\nCMAKE_INSTALL_FRAMEWORK_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks\"\nCMAKE_INSTALL_LIB_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks/lib\"\nFRAMEWORKS_FULL_PATH=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n# Are we building a project that uses frameworks or dylibs?\ncase \"$SFML_BINARY_TYPE\" in\n    DYLIBS)\n        frameworks=\"false\"\n        ;;\n    *)\n        frameworks=\"true\"\n        ;;\nesac\n\n# Echoes to stderr\nerror () # $* message to display\n{\n    echo $* 1>&2\n    exit 2\n}\n\nassert () # $1 is a boolean, $2...N is an error message\n{\n    if [ $# -lt 2 ]\n    then\n        error \"Internal error in assert: not enough args\"\n    fi\n\n    if [ $1 -ne 0 ]\n    then\n        shift\n        error \"$*\"\n    fi\n}\n\nforce_remove () # $@ is some paths\n{\n    test $# -ge 1\n    assert $? \"force_remove() requires at least one parameter\"\n    rm -fr $@\n    assert $? \"couldn't remove $@\"\n}\n\ncopy () # $1 is a source, $2 is a destination\n{\n    test $# -eq 2\n    assert $? \"copy() requires two parameters\"\n    ditto \"$1\" \"$2\"\n    assert $? \"couldn't copy $1 to $2\"\n}\n\nrequire () # $1 is a SFML module like 'system' or 'audio'\n{\n    dest=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n    if [ -z \"$1\" ]\n    then\n        error \"require() requires one parameter!\"\n    else\n        # clean potentially old stuff\n        force_remove \"$dest/libsfml-$1\"*\n        force_remove \"$dest/sfml-$1.framework\"\n\n        # copy SFML libraries\n        if [ \"$frameworks\" = \"true\" ]\n        then\n            source=\"$CMAKE_INSTALL_FRAMEWORK_PREFIX/sfml-$1.framework\"\n            target=\"sfml-$1.framework\"\n        elif [ \"$SFML_LINK_DYLIBS_SUFFIX\" = \"-d\" ]\n        then\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1-d.dylib\"\n            target=\"`readlink $source`\"\n        else\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1.dylib\"\n            target=\"`readlink $source`\"\n        fi\n\n        copy \"$source\" \"$dest/$target\"\n\n        # copy extra dependencies\n        if [ \"$1\" = \"audio\" ]\n        then\n            # copy \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\" frameworks too\n            for f in \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\"\n            do\n                copy \"$SFML_DEPENDENCIES_INSTALL_PREFIX/$f.framework\" \"$dest/$f.framework\"\n            done\n        elif [ \"$1\" = \"graphics\" ]\n        then\n            copy \"$SFML_DEPENDENCIES_INSTALL_PREFIX/freetype.framework\" \"$dest/freetype.framework\"\n        fi\n    fi\n}\n\nif [ -n \"$SFML_SYSTEM\" ]\nthen\n    require \"system\"\nfi\n\nif [ -n \"$SFML_AUDIO\" ]\nthen\n    require \"audio\"\nfi\n\nif [ -n \"$SFML_NETWORK\" ]\nthen\n    require \"network\"\nfi\n\nif [ -n \"$SFML_WINDOW\" ]\nthen\n    require \"window\"\nfi\n\nif [ -n \"$SFML_GRAPHICS\" ]\nthen\n    require \"graphics\"\nfi\n\n                \n";
 		};
-		8492C13125EAFE63005BFCF9 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This shell script simply copies required SFML dylibs/frameworks into the application bundle frameworks folder.\n# If you're using static libraries (which is not recommended) you should remove this script from your project.\n\n# SETTINGS\nSFML_DEPENDENCIES_INSTALL_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks\"\nCMAKE_INSTALL_FRAMEWORK_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks\"\nCMAKE_INSTALL_LIB_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks/lib\"\nFRAMEWORKS_FULL_PATH=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n# Are we building a project that uses frameworks or dylibs?\ncase \"$SFML_BINARY_TYPE\" in\n    DYLIBS)\n        frameworks=\"false\"\n        ;;\n    *)\n        frameworks=\"true\"\n        ;;\nesac\n\n# Echoes to stderr\nerror () # $* message to display\n{\n    echo $* 1>&2\n    exit 2\n}\n\nassert () # $1 is a boolean, $2...N is an error message\n{\n    if [ $# -lt 2 ]\n    then\n        error \"Internal error in assert: not enough args\"\n    fi\n\n    if [ $1 -ne 0 ]\n    then\n        shift\n        error \"$*\"\n    fi\n}\n\nforce_remove () # $@ is some paths\n{\n    test $# -ge 1\n    assert $? \"force_remove() requires at least one parameter\"\n    rm -fr $@\n    assert $? \"couldn't remove $@\"\n}\n\ncopy () # $1 is a source, $2 is a destination\n{\n    test $# -eq 2\n    assert $? \"copy() requires two parameters\"\n    ditto \"$1\" \"$2\"\n    assert $? \"couldn't copy $1 to $2\"\n}\n\nrequire () # $1 is a SFML module like 'system' or 'audio'\n{\n    dest=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n    if [ -z \"$1\" ]\n    then\n        error \"require() requires one parameter!\"\n    else\n        # clean potentially old stuff\n        force_remove \"$dest/libsfml-$1\"*\n        force_remove \"$dest/sfml-$1.framework\"\n\n        # copy SFML libraries\n        if [ \"$frameworks\" = \"true\" ]\n        then\n            source=\"$CMAKE_INSTALL_FRAMEWORK_PREFIX/sfml-$1.framework\"\n            target=\"sfml-$1.framework\"\n        elif [ \"$SFML_LINK_DYLIBS_SUFFIX\" = \"-d\" ]\n        then\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1-d.dylib\"\n            target=\"`readlink $source`\"\n        else\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1.dylib\"\n            target=\"`readlink $source`\"\n        fi\n\n        copy \"$source\" \"$dest/$target\"\n\n        # copy extra dependencies\n        if [ \"$1\" = \"audio\" ]\n        then\n            # copy \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\" frameworks too\n            for f in \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\"\n            do\n                copy \"$SFML_DEPENDENCIES_INSTALL_PREFIX/$f.framework\" \"$dest/$f.framework\"\n            done\n        elif [ \"$1\" = \"graphics\" ]\n        then\n            copy \"$SFML_DEPENDENCIES_INSTALL_PREFIX/freetype.framework\" \"$dest/freetype.framework\"\n        fi\n    fi\n}\n\nif [ -n \"$SFML_SYSTEM\" ]\nthen\n    require \"system\"\nfi\n\nif [ -n \"$SFML_AUDIO\" ]\nthen\n    require \"audio\"\nfi\n\nif [ -n \"$SFML_NETWORK\" ]\nthen\n    require \"network\"\nfi\n\nif [ -n \"$SFML_WINDOW\" ]\nthen\n    require \"window\"\nfi\n\nif [ -n \"$SFML_GRAPHICS\" ]\nthen\n    require \"graphics\"\nfi\n\n                ";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8464C4E925E9E7A900596BE0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8464C50A25E9E98500596BE0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -764,6 +631,7 @@
 				8411C84325EAFAF5007D621B /* Player.cpp in Sources */,
 				8411C83325EAFAF5007D621B /* Clue.cpp in Sources */,
 				8411C83125EAFAF5007D621B /* Engine.cpp in Sources */,
+				84BF7BDB25EC837E0028B0DF /* DeadlineBar.cpp in Sources */,
 				8464C51725E9E98500596BE0 /* main.cpp in Sources */,
 				8411C83525EAFAF5007D621B /* DrawablePlayerBoard.cpp in Sources */,
 				8411C84025EAFAF5007D621B /* Buzzer.cpp in Sources */,
@@ -806,29 +674,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8492C12E25EAFE63005BFCF9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				84BF7BBF25EC72180028B0DF /* GameMessage.cpp in Sources */,
-				84BF7BC025EC72180028B0DF /* Utils.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		84BF7B5125EC1E2B0028B0DF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8464C50E25E9E98500596BE0 /* JeopardyGameClient */;
-			targetProxy = 84BF7B5025EC1E2B0028B0DF /* PBXContainerItemProxy */;
-		};
-		84BF7B5325EC1E2B0028B0DF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8464C52A25E9E9AE00596BE0 /* JeopardyGameServer */;
-			targetProxy = 84BF7B5225EC1E2B0028B0DF /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8464C50125E9E7A900596BE0 /* Debug */ = {
@@ -919,26 +765,6 @@
 			};
 			name = Release;
 		};
-		8464C50425E9E7A900596BE0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "JeopardyGame/JeopardyGame-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		8464C50525E9E7A900596BE0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "JeopardyGame/JeopardyGame-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		8464C52225E9E98500596BE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -979,26 +805,6 @@
 			};
 			name = Release;
 		};
-		8492C14625EAFE63005BFCF9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Shared/Shared-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		8492C14725EAFE63005BFCF9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Shared/Shared-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1007,15 +813,6 @@
 			buildConfigurations = (
 				8464C50125E9E7A900596BE0 /* Debug */,
 				8464C50225E9E7A900596BE0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8464C50325E9E7A900596BE0 /* Build configuration list for PBXNativeTarget "JeopardyGame" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8464C50425E9E7A900596BE0 /* Debug */,
-				8464C50525E9E7A900596BE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1034,15 +831,6 @@
 			buildConfigurations = (
 				8464C53E25E9E9AE00596BE0 /* Debug */,
 				8464C53F25E9E9AE00596BE0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8492C14525EAFE63005BFCF9 /* Build configuration list for PBXNativeTarget "Shared" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8492C14625EAFE63005BFCF9 /* Debug */,
-				8492C14725EAFE63005BFCF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

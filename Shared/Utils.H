@@ -33,4 +33,7 @@ namespace Utils
 
 	// Returns true if s2 is contained in s1, and false otherwise.
 	bool contains(const std::string& s1, const std::string& s2, bool ignoreCase = true);
+
+    // Returns the nearest odd number to x.
+    unsigned int nearestOdd(float x);
 }

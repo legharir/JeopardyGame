@@ -7,7 +7,7 @@
 Engine::Engine()
     : m_running(true)
     , m_window(sf::VideoMode(1280, 720), "Jeopardy!")
-    , m_client(this, "localhost", 2222, m_messageQueue)
+    , m_client(this, "localhost", 2223, m_messageQueue)
     , m_event()
 {
 }

@@ -18,22 +18,24 @@ void PlayState::init(Engine* game)
     if (!m_font.loadFromFile("/System/Library/Fonts/SFNSMono.ttf"))
         throw;
 
-    m_clue.setSize(sf::Vector2f(500, 500));
+    const auto windowSize = m_game->getWindowSize();
+    
+    const auto clueSize = sf::Vector2f(1000, 400);
+    m_clue.setSize(clueSize);
     m_clue.setCharacterSize(30);
+    m_clue.setPosition(sf::Vector2f((windowSize.x - clueSize.x) / 2, 20));
+    
+    m_deadlineBar = DeadlineBar(1000);
+    m_deadlineBar.setPosition(sf::Vector2f((windowSize.x - m_deadlineBar.getWidth()) / 2, 450));
+    m_deadlineBar.setDeadline(m_responseDeadline);
 
     m_responseField = TextField();
     m_responseField.setPosition(sf::Vector2f(500, 550));
     m_responseField.setLabel("What/Who is...");
     m_responseField.setFont(m_font);
     m_responseField.setFocused(m_isResponderSelf);
-
-    m_countdown.setFont(m_font);
-    auto countdownPos = m_responseField.getPosition();
-    countdownPos.x += m_responseField.getSize().x;
-    m_countdown.setPosition(countdownPos);
-    m_countdown.setCharacterSize(20);
-
-    const auto& bottom = (float)m_game->getWindowSize().y;
+    
+    const auto& bottom = windowSize.y;
     m_podiums.setPlayerInfo(m_game->getPlayerInfo());
     // 30 is font size, 10 is margin.
     m_podiums.setPosition(0, bottom - 30 * 2 - 10);
@@ -98,20 +100,14 @@ void PlayState::handleBuzzerEnabled(const BuzzerEnabledMessage& message)
 void PlayState::update()
 {
     m_podiums.update();
-
-    if (!m_responseReceived)
-    {
-        const auto now = Utils::getMsSinceEpoch();
-        const auto timeRemaining = std::max((double)(m_responseDeadline - now) / 1000, 0.0);
-        m_countdown.setString(std::to_string(timeRemaining));
-    }
+    m_deadlineBar.update();
 }
 
 void PlayState::draw(sf::RenderWindow& window)
 {
     window.draw(m_responseField);
     window.draw(m_clue);
-    window.draw(m_countdown);
+    window.draw(m_deadlineBar);
     window.draw(m_podiums);
 }
 
@@ -141,8 +137,6 @@ void PlayState::handleKeyPressed(const sf::Event::KeyEvent& key)
     if (key.code == sf::Keyboard::Enter)
     {
         // Send the response to the server if the player hit enter.
-        // TODO: is getting the text from the response field kosher? Should I be storing the state
-        // of the response string in this class instead and passing it down to the text field instead?
         ClueResponseMessage clueResponseMessage(m_responseField.getText());
         packet << clueResponseMessage;
         m_game->getClient()->send(packet);

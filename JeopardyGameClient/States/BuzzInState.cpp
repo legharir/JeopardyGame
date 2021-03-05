@@ -14,15 +14,18 @@ void BuzzInState::init(Engine* game)
     if (!m_font.loadFromFile("/System/Library/Fonts/SFNSMono.ttf"))
         throw;
 
-    m_clue.setSize(sf::Vector2f(500, 500));
+    const auto windowSize = m_game->getWindowSize();
+    
+    const auto clueSize = sf::Vector2f(1000, 400);
+    m_clue.setSize(clueSize);
     m_clue.setCharacterSize(30);
+    m_clue.setPosition(sf::Vector2f((windowSize.x - clueSize.x) / 2, 20));
 
-    float windowWidth = (float)m_game->getWindowSize().x;
-    m_buzzer.setMaxSize(sf::Vector2f(windowWidth, 50));
+    m_buzzer.setMaxSize(sf::Vector2f(windowSize.x, 50));
     m_buzzer.setPosition(sf::Vector2f(0, 500));
     m_buzzer.setFont(m_font);
 
-    const auto& bottom = (float)m_game->getWindowSize().y;
+    const auto bottom = (float)m_game->getWindowSize().y;
     m_podiums.setPlayerInfo(m_game->getPlayerInfo());
     m_podiums.setPosition(0, bottom - 30 * 2);
 }

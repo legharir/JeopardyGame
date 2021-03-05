@@ -122,3 +122,9 @@ bool Utils::contains(const std::string& s1, const std::string& s2, bool ignoreCa
     });
     return (it != s1.end());
 }
+
+unsigned int Utils::nearestOdd(float x)
+{
+    return 2 * ( (int)(x / 2.0f) ) + 1;
+}
+

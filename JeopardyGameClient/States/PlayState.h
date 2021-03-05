@@ -6,6 +6,7 @@
 #include "Clue.h"
 #include "TextField.h"
 #include "Podiums.h"
+#include "DeadlineBar.hpp"
 
 #include <SFML/Graphics.hpp>
 
@@ -55,7 +56,7 @@ private:
     sf::Font m_font;
     Clue m_clue;
     TextField m_responseField;
-    sf::Text m_countdown;
+    DeadlineBar m_deadlineBar;
     Podiums m_podiums;
 
     // Event handlers.
