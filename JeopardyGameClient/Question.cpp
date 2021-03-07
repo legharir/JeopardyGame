@@ -1,5 +1,7 @@
 #include "Question.h"
 
+#include "ResourcePath.hpp"
+
 Question::Question(
 	std::string& category, const std::string& clue, const std::string& answer, const unsigned int value)
 	: m_category(category)
@@ -54,7 +56,7 @@ void Question::draw(sf::RenderTarget& target, sf::RenderStates states, const sf:
 
 	// the text
 	sf::Font font;
-	if (!font.loadFromFile("/System/Library/Fonts/SFNSMono.ttf")) {
+    if (!font.loadFromFile(resourcePath() + "KORIN.ttf")) {
 		std::cout << "Failed to load font" << std::endl;
 	}
 	sf::Text text;

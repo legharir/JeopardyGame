@@ -1,6 +1,7 @@
 #include "ResultsState.h"
 
 #include "Utils.H"
+#include "ResourcePath.hpp"
 
 ResultsState ResultsState::m_resultsState;
 
@@ -11,7 +12,7 @@ void ResultsState::init(Engine* game)
     m_game = game;
     m_curResultInd = 0;
     
-    if (!m_font.loadFromFile("/System/Library/Fonts/SFNSMono.ttf"))
+    if (!m_font.loadFromFile(resourcePath() + "KORIN.ttf"))
         throw;
 
     m_curPlayerName = sf::Text("", m_font, 30);

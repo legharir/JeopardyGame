@@ -55,15 +55,10 @@ public:
     // Returns true only if a value cell is clicked.
     bool clicked(const sf::Event::MouseButtonEvent& mouse) const;
 
-    // TODO: Not sure what to make the return type here. I would normally just
-    // return Cell, however what happens if the call the method at a position
-    // not occupied by a value cell? In that case, it would be nice to be able
-    // to check for 'null' values.
-    // Returns the category and value of the value cell at the specified position.
-    // This is useful when a player clicks on a value cell during their turn (we
-    // can inform the server to send us the clue).
     const Cell* getValueCellAtPos(int x, int y) const;
     void setPicked(const std::string& category, unsigned int value);
+    
+    void setPosition(sf::Vector2f pos);
 
     void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
@@ -73,6 +68,7 @@ private:
 
     sf::Vector2f m_cellSize;
     sf::Vector2f m_cellMargin;
+    sf::Vector2f m_pos;
 
     // Represents a category or value rectangle in the player board.
     std::vector<Cell> m_cells;

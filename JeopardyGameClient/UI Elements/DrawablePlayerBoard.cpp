@@ -1,6 +1,7 @@
 #include "DrawablePlayerBoard.h"
 
 #include "Utils.h"
+#include "ResourcePath.hpp"
 
 #include <algorithm>
 #include <iostream>
@@ -9,23 +10,24 @@ DrawablePlayerBoard::DrawablePlayerBoard() = default;
 
 DrawablePlayerBoard::DrawablePlayerBoard(const PlayerBoard& playerBoard)
     : PlayerBoard(playerBoard)
-    , m_cellSize(160, 80)
+    , m_cellSize(170, 80)
     , m_cellMargin(20, 20)
+    , m_pos(70, 20)
 {
     // TODO: remove this since m_font isn't being used in draw()?
     // Initialize the font.
-    if (!m_font.loadFromFile("/System/Library/Fonts/SFNSMono.ttf"))
+    if (!m_font.loadFromFile(resourcePath() + "KORIN.ttf"))
         throw;
 
     // Initialize each cell in the game board.
-    sf::Vector2f cellPos(0, 0);
+    sf::Vector2f cellPos = m_pos;
     for (const auto& cluesForCategory : getClues())
     {
         const auto& category = cluesForCategory.first;
         const auto& clues = cluesForCategory.second;
 
         // Draw the category.
-        cellPos.y = 0;
+        cellPos.y = m_pos.y;
 
         Button categoryButton(cellPos, category, m_font, m_cellSize);
         const auto categoryCell = Cell(CellType::Category, categoryButton, category);

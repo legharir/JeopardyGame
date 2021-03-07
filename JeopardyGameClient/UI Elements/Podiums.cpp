@@ -20,7 +20,7 @@ void Podiums::setPlayerInfo(const PlayerInfo* playerInfo)
 void Podiums::setPosition(float x, float y)
 {
     auto xPos = x;
-    const auto rightMargin = 100;
+    const auto rightMargin = 200;
     for (auto& podium : m_podiums)
     {
         podium.setPosition(xPos, y);

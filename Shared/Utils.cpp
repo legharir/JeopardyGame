@@ -17,22 +17,8 @@ std::string Utils::ltrim(const std::string& str)
 
 std::string Utils::cleanToken(const std::string& token)
 {
-    std::string cleaned;
-    auto start = 0;
-    auto end = token.find("\"");
-
-    while (end != std::string::npos)
-    {
-        // Get the part of the string leading up to and including the next quote.
-        const auto part = token.substr(start, end - start + 1);
-        cleaned += part;
-
-        // Skip the next character since it's guaranteed to be another quote.
-        start = end + 2;
-        end = token.find("\"", start);
-    }
-    cleaned += token.substr(start, token.size());
-
+    auto cleaned = token;
+    cleaned.erase(std::remove(cleaned.begin(), cleaned.end(), '\\'), cleaned.end());
     return cleaned;
 }
 

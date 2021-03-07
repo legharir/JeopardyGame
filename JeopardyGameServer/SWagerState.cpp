@@ -15,7 +15,8 @@ void SWagerState::init(Game* game)
 
 void SWagerState::update()
 {
-    if (Utils::getMsSinceEpoch() > m_game->getWagerDeadline())
+    if (m_game->getCurRound() == Round::FINAL_JEOPARDY &&
+        Utils::getMsSinceEpoch() > m_game->getWagerDeadline())
     {
         m_game->onFinalJeopardyPlayStart();
         m_game->changeState(SPlayState::getInstance());
@@ -25,4 +26,8 @@ void SWagerState::update()
 void SWagerState::handleWager(const WagerMessage& message, const Player& player)
 {
     m_game->onWagerSubmitted(player.getName(), message.wager);
+    if (m_game->getCurRound() != Round::FINAL_JEOPARDY)
+    {
+        m_game->changeState(SPlayState::getInstance());
+    }
 }

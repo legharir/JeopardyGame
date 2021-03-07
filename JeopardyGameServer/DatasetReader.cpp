@@ -1,6 +1,6 @@
 #include "DatasetReader.h"
 
-#include "Utils.h"
+#include "Utils.H"
 #include "ResourcePath.hpp"
 
 #include <fstream>
@@ -20,9 +20,9 @@ Clue DatasetReader::getClueFromTokens(const std::vector<std::string>& tokens)
 {
     const auto value = std::stoi(tokens[1]);
     const auto isDailyDouble = tokens[2] == "yes" ? true : false;
-    const auto category = tokens[3];
-    const auto answer = tokens[5];
-    const auto question = tokens[6];
+    const auto category = Utils::cleanToken(tokens[3]);
+    const auto answer = Utils::cleanToken(tokens[5]);
+    const auto question = Utils::cleanToken(tokens[6]);
     return Clue(category, value, answer, question, isDailyDouble);
 }
 

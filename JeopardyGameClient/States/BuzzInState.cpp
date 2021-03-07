@@ -3,6 +3,7 @@
 #include "PickState.h"
 #include "PlayState.h"
 #include "Utils.H"
+#include "ResourcePath.hpp"
 
 BuzzInState BuzzInState::m_buzzInState;
 
@@ -11,7 +12,7 @@ void BuzzInState::init(Engine* game)
     std::cout << "[Client] In BuzzInState" << std::endl;
     m_game = game;
 
-    if (!m_font.loadFromFile("/System/Library/Fonts/SFNSMono.ttf"))
+    if (!m_font.loadFromFile(resourcePath() + "KORIN.ttf"))
         throw;
 
     const auto windowSize = m_game->getWindowSize();

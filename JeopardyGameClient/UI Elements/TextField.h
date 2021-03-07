@@ -8,7 +8,7 @@ class TextField : public sf::Drawable
 {
 public:
     TextField(const sf::Vector2f& pos = sf::Vector2f(0, 0), const std::string& label = "",
-              const sf::Font& font = sf::Font(), const sf::Vector2f& size = sf::Vector2f(300, 50),
+              const sf::Font& font = sf::Font(), const sf::Vector2f& size = sf::Vector2f(500, 50),
               const sf::Color& fieldOutlineColor = sf::Color(), const sf::Color& textColor = sf::Color::Black);
 
     std::string getText() const;

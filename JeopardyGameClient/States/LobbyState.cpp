@@ -2,6 +2,7 @@
 
 #include "PickState.h"
 #include "Utils.h"
+#include "ResourcePath.hpp"
 
 #include <SFML/Network.hpp>
 #include <iostream>
@@ -19,7 +20,7 @@ void LobbyState::init(Engine* game)
     packet << message;
     m_game->getClient()->send(packet);
 
-    if (!m_font.loadFromFile("/System/Library/Fonts/SFNSMono.ttf"))
+    if (!m_font.loadFromFile(resourcePath() + "KORIN.ttf"))
         throw;
 
     m_startGameButton.setPosition(sf::Vector2f(300, 500));

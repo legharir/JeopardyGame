@@ -10,11 +10,8 @@ namespace Utils
 	// Returns a copy of the given string with any leading space characters trimmed off.
 	std::string ltrim(const std::string& str);
 
-	// Clues/answers/categories in the dataset are strings that may contain quotes.
-	// For some reason, these quotes are wrapped by an extra set of quotes themselves.
-	// (e.g. LORD OF THE ""RING""s). This function takes in such an entity, and returns a
-	// "cleaned" version in which extra inner quotes are removed (e.g. LORD OF THE "RING"s).
-	std::string cleanToken(const std::string& token);
+    // Returns a new string with all '\' characters stripped from it.
+std::string cleanToken(const std::string& token);
 
 	// Returns the tokens obtained by splitting the given string with the provided delimiter.
 	std::vector<std::string> split(const std::string& str, const std::string& delimiter);

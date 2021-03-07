@@ -2,6 +2,7 @@
 
 #include "BuzzInState.h"
 #include "Utils.H"
+#include "ResourcePath.hpp"
 
 ClueState ClueState::m_clueState;
 
@@ -10,7 +11,7 @@ void ClueState::init(Engine* game)
     std::cout << "[Client] In CluState" << std::endl;
     m_game = game;
 
-    if (!m_font.loadFromFile("/System/Library/Fonts/SFNSMono.ttf"))
+    if (!m_font.loadFromFile(resourcePath() + "KORIN.ttf"))
         throw;
 
     sf::Vector2f clueSize;

@@ -5,6 +5,7 @@
 #include "ResultsState.h"
 
 #include "Utils.H"
+#include "ResourcePath.hpp"
 
 #include <algorithm>
 
@@ -18,7 +19,7 @@ void PlayState::init(Engine* game)
     m_isResponderSelf = m_game->getRound() == Round::FINAL_JEOPARDY ?
         true : m_game->getClueResponder() == m_game->getSelf();
 
-    if (!m_font.loadFromFile("/System/Library/Fonts/SFNSMono.ttf"))
+    if (!m_font.loadFromFile(resourcePath() + "KORIN.ttf"))
         throw;
 
     const auto windowSize = m_game->getWindowSize();
@@ -33,11 +34,11 @@ void PlayState::init(Engine* game)
     m_deadlineBar.setDeadline(m_responseDeadline);
 
     m_responseField = TextField();
-    m_responseField.setPosition(sf::Vector2f(500, 550));
+    m_responseField.setPosition(sf::Vector2f(450, 500));
     m_responseField.setLabel("What/Who is...");
     m_responseField.setFont(m_font);
     m_responseField.setFocused(m_isResponderSelf);
-    
+
     const auto& bottom = windowSize.y;
     m_podiums.setPlayerInfo(m_game->getPlayerInfo());
     // 30 is font size, 10 is margin.

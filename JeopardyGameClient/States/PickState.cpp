@@ -2,6 +2,7 @@
 
 #include "ClueState.h"
 #include "WagerState.h"
+#include "ResourcePath.hpp"
 
 #include "Button.h"
 #include "GameMessage.h"
@@ -19,7 +20,7 @@ void PickState::init(Engine* game)
     std::cout << "[Client] In PickState" << std::endl;
     m_game = game;
 
-    if (!m_font.loadFromFile("/System/Library/Fonts/SFNSMono.ttf"))
+    if (!m_font.loadFromFile(resourcePath() + "KORIN.ttf"))
         throw;
 
     const auto& bottom = (float)m_game->getWindowSize().y;
