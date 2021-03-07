@@ -1,3 +1,5 @@
 ./JeopardyGameServer/Datasets/
-
-./JeopardyGame.xcodeproj
+JeopardyGame.xcodeproj/
+JeopardyGame/
+*.ttf
+*.plist
