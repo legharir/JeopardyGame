@@ -44,6 +44,7 @@ void PickState::handleEvent(const sf::Event& event)
 void PickState::handleRoundStart(const RoundStartMessage& message)
 {
     m_playerBoard = message.playerBoard;
+    m_game->setRound(message.round);
 }
 
 void PickState::handleCluePickingStarted(const CluePickingStartedMessage& message)
@@ -76,8 +77,9 @@ void PickState::handleDailyDouble(const DailyDoubleMessage& message)
 void PickState::handleFinalJeopardy(const FinalJeopardyMessage& message)
 {
     const auto& wagerState = WagerState::getInstance();
-    wagerState->setCategory(message.category);
+    wagerState->setCategory("Final Jeopardy: " + message.category);
     wagerState->setResponding(true);
+    wagerState->setDeadline(message.wagerDeadline);
     changeState(m_game, WagerState::getInstance());
 }
 

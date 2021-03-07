@@ -20,7 +20,9 @@ Game::Game()
     , m_buzzerReadyDelay(2000)
     , m_buzzInWindowLength(4000)
     , m_responseWindowLength(8000)
-    , m_finalJeopardyWagerWindowLength(20000)
+    , m_dailyDoubleResponseWindowLength(15000)
+    , m_finalJeopardyWagerWindowLength(5000)
+    , m_finalJeopardyResponseWindowLength(5000)
     , m_curState(nullptr)
     , m_picker(nullptr)
     , m_responder(nullptr)
@@ -201,6 +203,11 @@ long long Game::getResponseDeadline() const
     return m_responseDeadline;
 }
 
+long long Game::getWagerDeadline() const
+{
+    return m_wagerDeadline;
+}
+
 bool Game::allPlayersResponded() const
 {
     return m_responded.size() == m_players.size();
@@ -254,10 +261,6 @@ void Game::endSubRound()
     broadcast(packet);
 }
 
-void Game::assignResponder(const std::string& responder)
-{
-}
-
 void Game::onCluePicked(const std::string& category, unsigned int value)
 {
     m_curClue = m_gameBoards.at(m_curRound).pickClue(category, value);
@@ -284,8 +287,13 @@ void Game::onWagerSubmitted(const std::string& playerName, unsigned int wager)
 {
     auto player = getPlayer(playerName);
     player->setWager(wager);
-    m_responseDeadline = Utils::getMsSinceEpoch() + 15000;
 
+    if (m_curRound == Round::FINAL_JEOPARDY) return;
+    // If we're not in final Jeopardy!, it means the wager must be for a daily double.
+    // Hence, ignore this message if it wasn't received by the clue picker.
+    if (playerName != m_picker->getName()) return;
+
+    m_responseDeadline = Utils::getMsSinceEpoch() + m_dailyDoubleResponseWindowLength;
     sf::Packet packet;
     WagerMessage wagerMessage;
     wagerMessage.answer = m_curClue.getAnswer();
@@ -377,16 +385,75 @@ void Game::onPartialClueResponse(const std::string& playerName, int partialRespo
 
 void Game::onFinalJeopardyStart()
 {
-    // Get the category of the final Jeopardy! round and send it to the players.
+    // Initialize the clue.
     const auto& clues = m_gameBoards.at(m_curRound).getClues();
     const auto& category = clues.begin()->first;
+    // Final Jeopardy! clue has value = 0.
+    m_curClue = m_gameBoards.at(m_curRound).pickClue(category, 0);
 
+    // Initialize all the wagers to zero.
+    for (auto& player : m_players)
+        player.second.setWager(0);
+
+    // Let the players know the Final Jeopardy! round has started and to set their wagers.
     m_wagerDeadline = Utils::getMsSinceEpoch() + m_finalJeopardyWagerWindowLength;
-
-    FinalJeopardyMessage finalJeopardyMessage;
-    finalJeopardyMessage.category = category;
+    FinalJeopardyMessage finalJeopardyMessage(m_curClue.getCategory(), m_wagerDeadline);
     sf::Packet packet;
     packet << finalJeopardyMessage;
+    broadcast(packet);
+}
+
+void Game::onFinalJeopardyPlayStart()
+{
+    m_responseDeadline = Utils::getMsSinceEpoch() + m_finalJeopardyResponseWindowLength;
+    sf::Packet packet;
+    WagerMessage wagerMessage;
+    wagerMessage.answer = m_curClue.getAnswer();
+    wagerMessage.responseDeadline = m_responseDeadline;
+    packet << wagerMessage;
+    broadcast(packet);
+}
+
+void Game::onFinalJeopardyResponse(const std::string& playerName, const std::string& response)
+{
+    auto player = getPlayer(playerName);
+    player->setFinalJeopardyResponse(response);
+}
+
+void Game::onFinalJeopardyEnd()
+{
+    // Let the players know that Final Jeopardy! is now over.
+    FinalJeopardyEndMessage finalJeopardyEndMessage;
+    sf::Packet packet;
+    packet << finalJeopardyEndMessage;
+    broadcast(packet);
+    packet.clear();
+    
+    const auto question = m_curClue.getQuestion();
+
+    // Send the results.
+    std::vector<FinalJeopardyResult> finalJeopardyResults;
+    for (auto& player : m_players)
+    {
+        const auto playerResponse = player.second.getFinalJeopardyResponse();
+        const auto correct = question.find(playerResponse) != std::string::npos;
+        const auto wager = player.second.getWager();
+        player.second.updateBalance(correct ? wager : wager * -1);
+        
+        FinalJeopardyResult result;
+        result.playerName = player.second.getName();
+        result.response = playerResponse;
+        result.correct = correct;
+        result.wager = wager;
+        result.finalBalance = player.second.getBalance();
+        
+        finalJeopardyResults.push_back(result);
+    }
+    
+    FinalJeopardyResultsMessage finalJeopardyResultsMessage;
+    finalJeopardyResultsMessage.question = question;
+    finalJeopardyResultsMessage.results = finalJeopardyResults;
+    packet << finalJeopardyResultsMessage;
     broadcast(packet);
 }
 

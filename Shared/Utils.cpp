@@ -75,22 +75,14 @@ unsigned int Utils::dollarStrToUInt(const std::string& dollarStr)
 std::string Utils::intToDollarStr(int amount)
 {
     std::string amountStr = std::to_string(std::abs(amount));
-    auto numDigits = 0;
-    std::string formatted;
 
-    for (const auto& digit : amountStr)
+    for (int i = amountStr.size() - 3; i > 0; i = i - 3)
     {
-        if (numDigits == 3)
-        {
-            formatted += ",";
-            numDigits = 0;
-        }
-        formatted += digit;
-        ++numDigits;
+        amountStr.insert(i, ",");
     }
 
     const auto& prefix = amount >= 0 ? "$" : "-$";
-    return prefix + formatted;
+    return prefix + amountStr;
 }
 
 bool Utils::insideRect(int x, int y, const sf::RectangleShape& rect)

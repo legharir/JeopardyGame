@@ -5,6 +5,9 @@
 
 #include <SFML/Network.hpp>
 #include <iostream>
+#include <thread>
+#include <chrono>
+
 
 int main()
 {
@@ -16,5 +19,6 @@ int main()
 		game.handleEvents();
 		game.update();
 		game.draw();
+        std::this_thread::sleep_for(std::chrono::milliseconds(20));
 	}
 }

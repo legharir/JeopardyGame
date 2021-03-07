@@ -28,6 +28,7 @@ void SPickState::init(Game* game)
         {
             m_game->startRound(Round::FINAL_JEOPARDY);
             m_game->onFinalJeopardyStart();
+            m_game->changeState(SWagerState::getInstance());
         }
         else
         {

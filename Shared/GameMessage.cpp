@@ -228,6 +228,16 @@ FinalJeopardyMessage::FinalJeopardyMessage(const std::string& category, long lon
 {
 }
 
+FinalJeopardyEndMessage::FinalJeopardyEndMessage()
+    : GameMessage(MessageType::FINAL_JEOPARDY_END)
+{
+}
+
+FinalJeopardyResultsMessage::FinalJeopardyResultsMessage()
+    : GameMessage(MessageType::FINAL_JEOPARDY_RESULTS)
+{
+}
+
 sf::Packet& operator<<(sf::Packet& packet, const MessageType& type)
 {
     return packet << (sf::Uint32)type;
@@ -418,10 +428,57 @@ sf::Packet& operator>>(sf::Packet& packet, WagerMessage& msg)
 
 sf::Packet& operator<<(sf::Packet& packet, const FinalJeopardyMessage& msg)
 {
-    return packet << msg.type << msg.category;
+    return packet << msg.type << msg.category << msg.wagerDeadline;
 }
 
 sf::Packet& operator>>(sf::Packet& packet, FinalJeopardyMessage& msg)
 {
-    return packet >> msg.category;
+    return packet >> msg.category >> msg.wagerDeadline;
+}
+
+sf::Packet& operator<<(sf::Packet& packet, const FinalJeopardyEndMessage& msg)
+{
+    return packet << msg.type;
+}
+
+sf::Packet& operator>>(sf::Packet& packet, FinalJeopardyEndMessage& msg)
+{
+    return packet;
+}
+
+sf::Packet& operator<<(sf::Packet& packet, const FinalJeopardyResult& msg)
+{
+    return packet << msg.playerName << msg.response << msg.correct << msg.wager << msg.finalBalance;
+}
+
+sf::Packet& operator>>(sf::Packet& packet, FinalJeopardyResult& msg)
+{
+    return packet >> msg.playerName >> msg.response >> msg.correct >> msg.wager >> msg.finalBalance;
+}
+
+sf::Packet& operator<<(sf::Packet& packet, const FinalJeopardyResultsMessage& msg)
+{
+    packet << msg.type << msg.question;
+    packet << (unsigned int)msg.results.size();
+    for (const auto result : msg.results)
+        packet << result;
+    return packet;
+}
+
+sf::Packet& operator>>(sf::Packet& packet, FinalJeopardyResultsMessage& msg)
+{
+    std::string question;
+    packet >> msg.question;
+
+    sf::Uint32 numResults;
+    packet >> numResults;
+    
+    for (int i = 0u; i < numResults; ++i)
+    {
+        FinalJeopardyResult result;
+        packet >> result;
+        msg.results.push_back(result);
+    }
+    
+    return packet;
 }

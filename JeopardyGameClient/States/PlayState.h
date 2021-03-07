@@ -23,6 +23,7 @@ public:
     void handleSubRoundEnded(const SubRoundEndedMessage& message);
     void handleCluePickingStarted(const CluePickingStartedMessage& message);
     void handleBuzzerEnabled(const BuzzerEnabledMessage& message);
+    void handleFinalJeopardyEnd(const FinalJeopardyEndMessage& message);
 
     void update();
     void draw(sf::RenderWindow& window);

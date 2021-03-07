@@ -44,6 +44,9 @@ public:
     void addPlayer(const std::string& playerName);
 
     void updatePlayerBalance(const std::string& playerName, int delta);
+    
+    Round getRound() const;
+    void setRound(Round round);
 
     sf::Time getDeltaTime() const;
     sf::Vector2u getWindowSize() const;
@@ -73,4 +76,6 @@ private:
     // is a single producer single consumer scenario, I think I can get away
     // with using the non-thread safe std::queue class.
     std::queue<sf::Packet> m_messageQueue;
+    
+    Round m_round;
 };

@@ -27,6 +27,8 @@ public:
     virtual void handleResponseReceived(const ResponseReceivedMessage& message){};
     virtual void handleSubRoundEnded(const SubRoundEndedMessage& message){};
     virtual void handleFinalJeopardy(const FinalJeopardyMessage& message){};
+    virtual void handleFinalJeopardyEnd(const FinalJeopardyEndMessage& message){};
+    virtual void handleFinalJeopardyResults(const FinalJeopardyResultsMessage& message){};
 
     virtual void draw(sf::RenderWindow& window) = 0;
     virtual void update() = 0;

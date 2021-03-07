@@ -15,19 +15,14 @@ void SWagerState::init(Game* game)
 
 void SWagerState::update()
 {
+    if (Utils::getMsSinceEpoch() > m_game->getWagerDeadline())
+    {
+        m_game->onFinalJeopardyPlayStart();
+        m_game->changeState(SPlayState::getInstance());
+    }
 }
 
 void SWagerState::handleWager(const WagerMessage& message, const Player& player)
 {
-    // If we're not in final Jeopardy!, ignore this message if it wasn't sent by
-    // the clue picker.
-    const auto isFinalJeopardyRound = m_game->getCurRound() != Round::FINAL_JEOPARDY;
-    if (isFinalJeopardyRound && player.getName() != m_game->getPickerName())
-        return;
-
-    if (!isFinalJeopardyRound)
-    {
-        m_game->onWagerSubmitted(player.getName(), message.wager);
-        changeState(m_game, SPlayState::getInstance());
-    }
+    m_game->onWagerSubmitted(player.getName(), message.wager);
 }

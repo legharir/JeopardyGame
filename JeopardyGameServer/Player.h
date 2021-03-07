@@ -17,6 +17,9 @@ public:
 
 	unsigned int getWager() const;
 	void setWager(unsigned int wager);
+    
+    std::string getFinalJeopardyResponse() const;
+    void setFinalJeopardyResponse(const std::string& response);
 
 	const sf::TcpSocket* const getSocket() const;
 
@@ -32,4 +35,6 @@ private:
 
 	// Socket used to communicate with the player.
 	sf::TcpSocket* m_socket;
+    
+    std::string m_finalJeopardyResponse;
 };

@@ -101,6 +101,21 @@ void LobbyState::handleMouseButtonPressed(const sf::Event::MouseButtonEvent& mou
 
 void LobbyState::handleTextEntered(const sf::Event::TextEvent& text)
 {
+    if (text.unicode == '\t')
+    {
+        if (m_seasonField.isFocused())
+        {
+            m_seasonField.setFocused(false);
+            m_episodeField.setFocused(true);
+        }
+        else
+        {
+            m_seasonField.setFocused(true);
+            m_episodeField.setFocused(false);
+        }
+
+    }
+    
     if (m_seasonField.isFocused())
         m_seasonField.onTextEntered(text.unicode);
     else if (m_episodeField.isFocused())

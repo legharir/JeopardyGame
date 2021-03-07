@@ -5,6 +5,7 @@
 #include "Clue.h"
 #include "TextField.h"
 #include "Podiums.h"
+#include "Buzzer.h"
 
 class WagerState : public GameState
 {
@@ -20,7 +21,8 @@ public:
 
     void setResponding(bool responding);
     void setCategory(const std::string& category);
-
+    void setDeadline(long long deadline);
+    
     // Singleton class shouldn't be copyable or deletable.
     WagerState(WagerState& other) = delete;
     void operator=(const WagerState&) = delete;
@@ -45,6 +47,7 @@ private:
     Clue m_clue;
     TextField m_wagerField;
     Podiums m_podiums;
+    Buzzer m_buzzer;
 
     // Event handlers.
     void handleTextEntered(const sf::Event::TextEvent& text);

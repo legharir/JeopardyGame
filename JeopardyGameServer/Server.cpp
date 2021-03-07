@@ -46,7 +46,7 @@ void Server::start()
 
 void Server::listen()
 {
-    std::cout << "Listening for client requests..." << std::endl;
+    std::cout << "Listening for client requests on port " << m_port << std::endl;
 
     sf::TcpListener listener;
     listener.listen(m_port);

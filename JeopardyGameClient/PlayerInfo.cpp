@@ -29,6 +29,11 @@ void PlayerInfo::addPlayer(const std::string& playerName)
     m_players[playerName] = Player(playerName);
 }
 
+int PlayerInfo::getPlayerBalance(const std::string& playerName) const
+{
+    return m_players.at(playerName).getBalance();
+}
+
 void PlayerInfo::updatePlayerBalance(const std::string& playerName, int amount)
 {
     m_players.at(playerName).updateBalance(amount);

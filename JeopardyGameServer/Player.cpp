@@ -62,3 +62,13 @@ bool Player::operator!=(const Player& other) const
 {
     return m_socket != other.getSocket();
 }
+
+std::string Player::getFinalJeopardyResponse() const
+{
+    return m_finalJeopardyResponse;
+}
+
+void Player::setFinalJeopardyResponse(const std::string& response)
+{
+    m_finalJeopardyResponse = response;
+}

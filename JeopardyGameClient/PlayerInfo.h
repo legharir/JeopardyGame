@@ -16,6 +16,7 @@ public:
     const std::vector<const Player*> getPlayers() const;
     void addPlayer(const std::string& playerName);
 
+    int getPlayerBalance(const std::string& playerName) const;
     void updatePlayerBalance(const std::string& playerName, int amount);
 
     const Player* getCluePicker() const;

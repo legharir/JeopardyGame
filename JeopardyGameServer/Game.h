@@ -46,6 +46,7 @@ public:
 
     long long getBuzzInDeadline() const;
     unsigned int getBuzzerReadyDelay() const;
+    long long getWagerDeadline() const;
     long long getResponseDeadline() const;
 
     bool allPlayersResponded() const;
@@ -55,7 +56,6 @@ public:
     void startRound(Round round);
     void startCluePickingPhase();
     void endSubRound();
-    void assignResponder(const std::string& responder);
     void onCluePicked(const std::string& category, unsigned int value);
     void onDailyDoublePicked(const std::string& playerName, const std::string& category, unsigned int value);
     void onWagerSubmitted(const std::string& playerName, unsigned int wager);
@@ -65,6 +65,9 @@ public:
     void onResponseDeadlineExceeded();
     void onPartialClueResponse(const std::string& playerName, int partialResponse);
     void onFinalJeopardyStart();
+    void onFinalJeopardyPlayStart();
+    void onFinalJeopardyResponse(const std::string& playerName, const std::string& response);
+    void onFinalJeopardyEnd();
 
 private:
     Server* m_server;
@@ -92,7 +95,9 @@ private:
     const unsigned m_buzzerReadyDelay;
     const unsigned m_buzzInWindowLength;
     const unsigned m_responseWindowLength;
+    const unsigned m_dailyDoubleResponseWindowLength;
     const unsigned m_finalJeopardyWagerWindowLength;
+    const unsigned m_finalJeopardyResponseWindowLength;
 
     void createPlayerBoards(const std::unordered_map<Round, GameBoard, EnumClassHash>& gameBoards);
 };

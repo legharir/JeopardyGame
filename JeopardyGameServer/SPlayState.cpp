@@ -2,6 +2,8 @@
 
 #include "SBuzzInState.h"
 #include "SPickState.h"
+#include "SEndGameState.h"
+
 #include "Utils.h"
 
 SPlayState SPlayState::m_sPlayState;
@@ -15,9 +17,16 @@ void SPlayState::init(Game* game)
 
 void SPlayState::update()
 {
-    auto reponseDeadlineExceeded = Utils::getMsSinceEpoch() > m_game->getResponseDeadline();
+    const auto reponseDeadlineExceeded = Utils::getMsSinceEpoch() > m_game->getResponseDeadline();
+    const auto isFinalJeopardyRound = m_game->getCurRound() == Round::FINAL_JEOPARDY;
+    
     if (reponseDeadlineExceeded)
-        handleClueResponse("");
+    {
+       if (isFinalJeopardyRound)
+           m_game->changeState(SEndGameState::getInstance());
+       else
+           handleClueResponse("");
+    }
 }
 
 void SPlayState::handlePartialClueResponse(const PartialClueResponseMessage& message, const Player& player)
@@ -27,6 +36,12 @@ void SPlayState::handlePartialClueResponse(const PartialClueResponseMessage& mes
 
 void SPlayState::handleClueResponse(const ClueResponseMessage& message, const Player& player)
 {
+    if (m_game->getCurRound() == Round::FINAL_JEOPARDY)
+    {
+        m_game->onFinalJeopardyResponse(player.getName(), message.response);
+        return;
+    }
+    
     // Ignore this message if it wasn't the clue responder who sent it.
     if (player.getName() != m_game->getResponderName())
         return;

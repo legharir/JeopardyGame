@@ -14,11 +14,9 @@
 DeadlineBar::DeadlineBar(float width, unsigned int numRects) : m_width(width)
 {
     
-    std::cout << "Num rects: " << numRects << std::endl;
     float totalMarginWidth = (numRects - 1) * 10;
     m_rectWidth = (width - totalMarginWidth) / numRects;
-    std::cout << "Rect width: " << m_rectWidth << std::endl;
-    
+
     for (int i = 0u; i < numRects; ++i)
     {
         m_rects.push_back(sf::RectangleShape(sf::Vector2f(m_rectWidth, 20)));
@@ -39,7 +37,6 @@ void DeadlineBar::setPosition(sf::Vector2f pos)
     for (auto& rect : m_rects)
     {
         rect.setPosition(pos);
-        std::cout << "Setting rectangle at x pos: " << pos.x << std::endl;
         pos.x += margin + m_rectWidth;
     }
 }
@@ -55,9 +52,6 @@ void DeadlineBar::setDeadline(long long deadline)
     
     m_deadline = deadline;
     m_rectTimeRatio = (float)m_rects.size() / (deadline - Utils::getMsSinceEpoch());
-    
-    std::cout << "deadline: " << deadline << std::endl;
-    std::cout << "rectTimeRatio: " << m_rectTimeRatio << std::endl;
 }
 
 void DeadlineBar::update()

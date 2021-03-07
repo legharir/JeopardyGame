@@ -7,7 +7,7 @@
 #include <iostream>
 
 const std::string DatasetReader::m_basePath = resourcePath();
-const unsigned int DatasetReader::m_cluesPerEpisode = 30 + 30 + 1;
+//const unsigned int DatasetReader::m_cluesPerEpisode = 30 + 30 + 1;
 
 std::vector<std::string> DatasetReader::getNextTokenizedLine(std::ifstream& dataset)
 {

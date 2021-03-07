@@ -2,6 +2,8 @@
 
 #include "BuzzInState.h"
 #include "PickState.h"
+#include "ResultsState.h"
+
 #include "Utils.H"
 
 #include <algorithm>
@@ -13,7 +15,8 @@ void PlayState::init(Engine* game)
     std::cout << "[Client] In PlayState" << std::endl;
     m_game = game;
     m_responseReceived = false;
-    m_isResponderSelf = m_game->getClueResponder() == m_game->getSelf();
+    m_isResponderSelf = m_game->getRound() == Round::FINAL_JEOPARDY ?
+        true : m_game->getClueResponder() == m_game->getSelf();
 
     if (!m_font.loadFromFile("/System/Library/Fonts/SFNSMono.ttf"))
         throw;
@@ -55,6 +58,8 @@ void PlayState::handleEvent(const sf::Event& event)
             break;
         case sf::Event::KeyPressed:
             handleKeyPressed(event.key);
+            break;
+        default:
             break;
     }
 }
@@ -100,7 +105,8 @@ void PlayState::handleBuzzerEnabled(const BuzzerEnabledMessage& message)
 void PlayState::update()
 {
     m_podiums.update();
-    m_deadlineBar.update();
+    if (!m_responseReceived)
+        m_deadlineBar.update();
 }
 
 void PlayState::draw(sf::RenderWindow& window)
@@ -123,6 +129,12 @@ void PlayState::setResponseDeadline(long long responseDeadline)
 
 void PlayState::handleTextEntered(const sf::Event::TextEvent& text)
 {
+    if (m_game->getRound() == Round::FINAL_JEOPARDY)
+    {
+        m_responseField.onTextEntered(text.unicode);
+        return;
+    }
+
     // Send the partial response to the server so that other players
     // may see the response as it's being typed.
     PartialClueResponseMessage partialClueResponseMessage(text.unicode);
@@ -141,4 +153,9 @@ void PlayState::handleKeyPressed(const sf::Event::KeyEvent& key)
         packet << clueResponseMessage;
         m_game->getClient()->send(packet);
     }
+}
+
+void PlayState::handleFinalJeopardyEnd(const FinalJeopardyEndMessage& message)
+{
+    m_game->changeState(ResultsState::getInstance());
 }

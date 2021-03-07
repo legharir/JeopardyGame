@@ -20,7 +20,9 @@ enum class MessageType
     CLUE_RESPONSE,
     RESPONSE_RECEIVED,
     SUB_ROUND_ENDED,
-    FINAL_JEOPARDY
+    FINAL_JEOPARDY,
+    FINAL_JEOPARDY_END,
+    FINAL_JEOPARDY_RESULTS,
 };
 
 enum class Round
@@ -250,7 +252,7 @@ struct SubRoundEndedMessage : public GameMessage
 };
 
 // This message is sent from the server to a clients to inform them of the
-// final Jeopardy! category.
+// start of the final Jeopardy! category.
 struct FinalJeopardyMessage : public GameMessage
 {
     FinalJeopardyMessage();
@@ -258,6 +260,28 @@ struct FinalJeopardyMessage : public GameMessage
 
     std::string category;
     long long wagerDeadline;
+};
+
+struct FinalJeopardyEndMessage : public GameMessage
+{
+    FinalJeopardyEndMessage();
+};
+
+struct FinalJeopardyResult
+{
+    std::string playerName;
+    std::string response;
+    bool correct;
+    sf::Uint32 wager;
+    sf::Int32 finalBalance;
+};
+
+struct FinalJeopardyResultsMessage : public GameMessage
+{
+    FinalJeopardyResultsMessage();
+    
+    std::string question;
+    std::vector<FinalJeopardyResult> results;
 };
 
 ////////////////////////////////// Packet Operator Overloads ////////////////////////////////////
@@ -312,3 +336,12 @@ sf::Packet& operator>>(sf::Packet& packet, WagerMessage& msg);
 
 sf::Packet& operator<<(sf::Packet& packet, const FinalJeopardyMessage& msg);
 sf::Packet& operator>>(sf::Packet& packet, FinalJeopardyMessage& msg);
+
+sf::Packet& operator<<(sf::Packet& packet, const FinalJeopardyEndMessage& msg);
+sf::Packet& operator>>(sf::Packet& packet, FinalJeopardyEndMessage& msg);
+
+sf::Packet& operator<<(sf::Packet& packet, const FinalJeopardyResult& msg);
+sf::Packet& operator>>(sf::Packet& packet, FinalJeopardyResult& msg);
+
+sf::Packet& operator<<(sf::Packet& packet, const FinalJeopardyResultsMessage& msg);
+sf::Packet& operator>>(sf::Packet& packet, FinalJeopardyResultsMessage& msg);

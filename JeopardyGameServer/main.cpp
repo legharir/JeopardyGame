@@ -7,7 +7,7 @@
 int main() {
 	Game game;
 
-	Server server(2223);
+	Server server(2133);
 	server.setGame(&game);
 	server.start();
 }

@@ -14,7 +14,7 @@ public:
 	Client(Engine* engine, const std::string& host, const unsigned int port, std::queue<sf::Packet>& messageQueue);
 	~Client();
 
-	bool connectToServer();
+	void connectToServer();
 	
 	void send(sf::Packet& packet);
 

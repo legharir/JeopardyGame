@@ -7,7 +7,7 @@
 Engine::Engine()
     : m_running(true)
     , m_window(sf::VideoMode(1280, 720), "Jeopardy!")
-    , m_client(this, "localhost", 2223, m_messageQueue)
+    , m_client(this, "localhost", 2133, m_messageQueue)
     , m_event()
 {
 }
@@ -136,6 +136,20 @@ void Engine::handleEvents()
                 m_states.back()->handleFinalJeopardy(message);
                 break;
             }
+            case MessageType::FINAL_JEOPARDY_END:
+            {
+                FinalJeopardyEndMessage message;
+                packet >> message;
+                m_states.back()->handleFinalJeopardyEnd(message);
+                break;
+            }
+            case MessageType::FINAL_JEOPARDY_RESULTS:
+            {
+                FinalJeopardyResultsMessage message;
+                packet >> message;
+                m_states.back()->handleFinalJeopardyResults(message);
+                break;
+            }
         }
 
         m_messageQueue.pop();
@@ -232,4 +246,14 @@ sf::Vector2u Engine::getWindowSize() const
 Client* Engine::getClient()
 {
     return &m_client;
+}
+
+Round Engine::getRound() const
+{
+    return m_round;
+}
+
+void Engine::setRound(Round round)
+{
+    m_round = round;
 }

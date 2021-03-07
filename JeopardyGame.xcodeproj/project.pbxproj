@@ -31,6 +31,8 @@
 		8464C51725E9E98500596BE0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8464C51625E9E98500596BE0 /* main.cpp */; };
 		8464C53025E9E9AE00596BE0 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8464C52F25E9E9AE00596BE0 /* ResourcePath.mm */; };
 		8464C53325E9E9AE00596BE0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8464C53225E9E9AE00596BE0 /* main.cpp */; };
+		8473A3AF25F42E0E00079907 /* SEndGameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8473A3AD25F42E0E00079907 /* SEndGameState.cpp */; };
+		84A8176725F35A76005483F8 /* season0.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84A8176625F35A76005483F8 /* season0.tsv */; };
 		84BF7B8E25EC71940028B0DF /* season15.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B6A25EC71910028B0DF /* season15.tsv */; };
 		84BF7B8F25EC71940028B0DF /* season36.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B6B25EC71920028B0DF /* season36.tsv */; };
 		84BF7B9025EC71940028B0DF /* season19.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 84BF7B6C25EC71920028B0DF /* season19.tsv */; };
@@ -76,6 +78,7 @@
 		84BF7BCF25EC72560028B0DF /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BF7BBC25EC72180028B0DF /* Utils.cpp */; };
 		84BF7BD025EC72560028B0DF /* Utils.H in Sources */ = {isa = PBXBuildFile; fileRef = 84BF7BBE25EC72180028B0DF /* Utils.H */; };
 		84BF7BDB25EC837E0028B0DF /* DeadlineBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BF7BD925EC837E0028B0DF /* DeadlineBar.cpp */; };
+		84F0445925F444B300D0EA36 /* ResultsState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F0445825F444B300D0EA36 /* ResultsState.cpp */; };
 		84F88F4825EB0525005580D9 /* SWagerState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F88F2E25EB0524005580D9 /* SWagerState.cpp */; };
 		84F88F4925EB0525005580D9 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F88F2F25EB0524005580D9 /* Game.cpp */; };
 		84F88F4A25EB0525005580D9 /* GameBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F88F3025EB0524005580D9 /* GameBoard.cpp */; };
@@ -142,7 +145,10 @@
 		8464C52F25E9E9AE00596BE0 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
 		8464C53125E9E9AE00596BE0 /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
 		8464C53225E9E9AE00596BE0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8473A3AD25F42E0E00079907 /* SEndGameState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SEndGameState.cpp; sourceTree = "<group>"; };
+		8473A3B225F42E6A00079907 /* SEndGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEndGameState.h; sourceTree = "<group>"; };
 		8492C12825EAFDA6005BFCF9 /* JeopardyGameClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "JeopardyGameClient-Info.plist"; path = "../../../JeopardyGameClient-Info.plist"; sourceTree = "<group>"; };
+		84A8176625F35A76005483F8 /* season0.tsv */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = season0.tsv; sourceTree = "<group>"; };
 		84BF7B6A25EC71910028B0DF /* season15.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season15.tsv; sourceTree = "<group>"; };
 		84BF7B6B25EC71920028B0DF /* season36.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season36.tsv; sourceTree = "<group>"; };
 		84BF7B6C25EC71920028B0DF /* season19.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = season19.tsv; sourceTree = "<group>"; };
@@ -185,6 +191,8 @@
 		84BF7BBE25EC72180028B0DF /* Utils.H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Utils.H; sourceTree = "<group>"; };
 		84BF7BD925EC837E0028B0DF /* DeadlineBar.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DeadlineBar.cpp; sourceTree = "<group>"; };
 		84BF7BDA25EC837E0028B0DF /* DeadlineBar.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DeadlineBar.hpp; sourceTree = "<group>"; };
+		84F0445725F444B300D0EA36 /* ResultsState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultsState.h; path = States/ResultsState.h; sourceTree = "<group>"; };
+		84F0445825F444B300D0EA36 /* ResultsState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ResultsState.cpp; path = States/ResultsState.cpp; sourceTree = "<group>"; };
 		84F88F2C25EB0524005580D9 /* GameBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBoard.h; sourceTree = "<group>"; };
 		84F88F2D25EB0524005580D9 /* SWagerState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWagerState.h; sourceTree = "<group>"; };
 		84F88F2E25EB0524005580D9 /* SWagerState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SWagerState.cpp; sourceTree = "<group>"; };
@@ -254,6 +262,8 @@
 		8464C51025E9E98500596BE0 /* JeopardyGameClient */ = {
 			isa = PBXGroup;
 			children = (
+				84F0445825F444B300D0EA36 /* ResultsState.cpp */,
+				84F0445725F444B300D0EA36 /* ResultsState.h */,
 				8411C81A25EAFAF4007D621B /* Client.cpp */,
 				8411C80A25EAFAF4007D621B /* Engine.cpp */,
 				8464C51625E9E98500596BE0 /* main.cpp */,
@@ -295,6 +305,7 @@
 		8464C52C25E9E9AE00596BE0 /* JeopardyGameServer */ = {
 			isa = PBXGroup;
 			children = (
+				8473A3B225F42E6A00079907 /* SEndGameState.h */,
 				84F88F4025EB0525005580D9 /* Clue.cpp */,
 				84F88F4725EB0525005580D9 /* Clue.h */,
 				84F88F3F25EB0525005580D9 /* DatasetReader.h */,
@@ -327,6 +338,7 @@
 				8464C52D25E9E9AE00596BE0 /* Supporting Files */,
 				84F88F2E25EB0524005580D9 /* SWagerState.cpp */,
 				84F88F2D25EB0524005580D9 /* SWagerState.h */,
+				8473A3AD25F42E0E00079907 /* SEndGameState.cpp */,
 			);
 			path = JeopardyGameServer;
 			sourceTree = "<group>";
@@ -432,6 +444,7 @@
 				84BF7B7B25EC71930028B0DF /* season34.tsv */,
 				84BF7B8625EC71940028B0DF /* season35.tsv */,
 				84BF7B6B25EC71920028B0DF /* season36.tsv */,
+				84A8176625F35A76005483F8 /* season0.tsv */,
 			);
 			name = Datasets;
 			path = JeopardyGameServer/Datasets;
@@ -567,6 +580,7 @@
 				84BF7BA725EC71940028B0DF /* season9.tsv in Resources */,
 				84BF7B9425EC71940028B0DF /* season33.tsv in Resources */,
 				84BF7BB125EC71940028B0DF /* season4.tsv in Resources */,
+				84A8176725F35A76005483F8 /* season0.tsv in Resources */,
 				84BF7BAF25EC71940028B0DF /* season29.tsv in Resources */,
 				84BF7B9125EC71940028B0DF /* season12.tsv in Resources */,
 				84BF7B9D25EC71940028B0DF /* season26.tsv in Resources */,
@@ -641,6 +655,7 @@
 				8411C83B25EAFAF5007D621B /* Podiums.cpp in Sources */,
 				8411C83725EAFAF5007D621B /* IntroState.cpp in Sources */,
 				8411C83025EAFAF5007D621B /* LobbyState.cpp in Sources */,
+				84F0445925F444B300D0EA36 /* ResultsState.cpp in Sources */,
 				8411C84125EAFAF5007D621B /* Question.cpp in Sources */,
 				8411C83425EAFAF5007D621B /* PickState.cpp in Sources */,
 				8411C82E25EAFAF5007D621B /* PlayerInfo.cpp in Sources */,
@@ -655,6 +670,7 @@
 			files = (
 				84BF7BCD25EC72560028B0DF /* GameMessage.cpp in Sources */,
 				84BF7BCE25EC72560028B0DF /* GameMessage.h in Sources */,
+				8473A3AF25F42E0E00079907 /* SEndGameState.cpp in Sources */,
 				84BF7BCF25EC72560028B0DF /* Utils.cpp in Sources */,
 				84BF7BD025EC72560028B0DF /* Utils.H in Sources */,
 				8464C53325E9E9AE00596BE0 /* main.cpp in Sources */,

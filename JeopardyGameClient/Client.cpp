@@ -7,11 +7,7 @@
 Client::Client(Engine* engine, const std::string& host, const unsigned int port, std::queue<sf::Packet>& messageQueue) : m_host(host), m_port(port), m_messageQueue(messageQueue)
 {
     m_game = engine;
-    if (!connectToServer())
-    {
-        std::cout << "Could not establish a connection to the server!" << std::endl;
-        throw;
-    }
+    connectToServer();
 	m_receiveThread = std::thread([this] { this->receive(); });
 }
 
@@ -20,9 +16,29 @@ Client::~Client()
     m_receiveThread.join();
 }
 
-bool Client::connectToServer()
+void Client::connectToServer()
 {
-    return m_socket.connect(m_host, m_port) == sf::Socket::Done;
+    std::cout << "Connecting to server on port " << m_port << std::endl;
+    const auto status = m_socket.connect(m_host, m_port);
+    switch (status) {
+        case sf::Socket::Status::Done:
+            std::cout << "Done" << std::endl;
+            break;
+        case sf::Socket::Status::Partial:
+            std::cout << "Could not connect to server! socket status: Partial" << std::endl;
+            throw;
+        case sf::Socket::Status::NotReady:
+            std::cout << "Could not connect to server! socket status: NotReady" << std::endl;
+            throw;
+        case sf::Socket::Status::Error:
+            std::cout << "Could not connect to server! socket status: Error" << std::endl;
+            throw;
+        case sf::Socket::Status::Disconnected:
+            std::cout << "Could not connect to server! socket status: Disconnected" << std::endl;
+            throw;
+        default:
+            break;
+    }
 }
 
 void Client::send(sf::Packet& packet)
